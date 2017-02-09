@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="24"
+    density="560dpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="66024445412070"
+    token="-6472390849623293742"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="895" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="541" />
+    <task
+        name="verifier"
+        duration="22" />
+
+    <artifact
+        location="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/outputs/apk/Books-6-2-6-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="66024445412070"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/outputs/apk/Books-6-2-6-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
