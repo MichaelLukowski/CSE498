@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v13/values-v13.xml",
+        "outputFile": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 283
                 },
                 "from": {
-                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-v13/styles.xml",
+                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-v13\\styles.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -20,6 +20,32 @@
                         "endLine": 6,
                         "endColumn": 12,
                         "endOffset": 343
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 5,
+                    "endColumn": 12,
+                    "endOffset": 283
+                },
+                "from": {
+                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-v13\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 118,
+                        "endLine": 6,
+                        "endColumn": 12,
+                        "endOffset": 349
                     }
                 }
             }

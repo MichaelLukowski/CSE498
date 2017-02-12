@@ -133,8 +133,8 @@ public class Books extends Activity implements SampleApplicationControl
     // Our renderer:
     private BooksRenderer mRenderer;
     
-    private static final String kAccessKey = "669ab267d2332a9c8f8c05730f2abd00a8c34fbd";
-    private static final String kSecretKey = "7afac700a02bd5d68ab2b0b4dcaca982dda5a17e";
+    private static final String kAccessKey = "7273303e335e97907b1074132bc42d7e2ca41c18";
+    private static final String kSecretKey = "2c1f372d4fdbea50f1220926de78ee278c2f0c2c";
     
     // View overlays to be displayed in the Augmented View
     private RelativeLayout mUILayout;
