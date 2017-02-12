@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/build/java/vuforia/Vuforia.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="15f0c848fc592fc94c41fff712b6079d754ecbe2">
+        <dex dex="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/2/Vuforia_d78e72aa9d1768f9bf9c4e2592d942775c7edd98/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0ca24eb6b0e1981027027cdedcbe31e3b10406a2">
+        <dex dex="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b20dfc25833056f5e1d7f24fe2dc44f96fe72af6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e10367cbd1eb682320f5854de61f72b9cc607874">
+        <dex dex="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55fade513fc173bf43346ebef08208dc68f5a7af/classes.dex" />
+    </item>
+
+</items>

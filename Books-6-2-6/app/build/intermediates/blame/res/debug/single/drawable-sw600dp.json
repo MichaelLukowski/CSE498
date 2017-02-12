@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/res/merged/debug/drawable-sw600dp/button_close_pressed.png",
+        "source": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/drawable-sw600dp/button_close_pressed.png"
+    },
+    {
+        "merged": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/res/merged/debug/drawable-sw600dp/button_close_normal.png",
+        "source": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/drawable-sw600dp/button_close_normal.png"
+    }
+]
