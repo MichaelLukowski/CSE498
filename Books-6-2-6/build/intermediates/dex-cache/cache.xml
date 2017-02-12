@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/build/java/vuforia/Vuforia.jar"
+        jar="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="08b91c6fe5a31fa7f035778e38be900035e75216">
+        <dex dex="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d3b391565f30c2f4b7bd1ab7620b89e3fc45a6bf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\build\java\vuforia\Vuforia.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="15f0c848fc592fc94c41fff712b6079d754ecbe2">
-        <dex dex="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/2/Vuforia_d78e72aa9d1768f9bf9c4e2592d942775c7edd98/classes.dex" />
+        <dex dex="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\transforms\dex\debug\folders\1000\2\Vuforia_f3304db81effd475b811b27a02b3e7b5bc445b5e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="0ca24eb6b0e1981027027cdedcbe31e3b10406a2">
-        <dex dex="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b20dfc25833056f5e1d7f24fe2dc44f96fe72af6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="e10367cbd1eb682320f5854de61f72b9cc607874">
-        <dex dex="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55fade513fc173bf43346ebef08208dc68f5a7af/classes.dex" />
+        sha1="fc6459a8a2db9a96dc497294e5e89f155a4f62c5">
+        <dex dex="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_749e4639ce1e426a28c6fefcb96b3f58a2084ab8\classes.dex" />
     </item>
 
 </items>

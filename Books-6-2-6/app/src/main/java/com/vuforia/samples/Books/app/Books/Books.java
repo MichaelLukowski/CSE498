@@ -140,6 +140,7 @@ public class Books extends Activity implements SampleApplicationControl
     private RelativeLayout mUILayout;
     private TextView mStatusBar;
     private Button mCloseButton;
+
     
     // Error message handling:
     private int mlastErrorCode = 0;
