@@ -63,6 +63,9 @@ import com.vuforia.samples.SampleApplication.utils.Texture;
 import org.apache.http.util.ByteArrayBuffer;
 import org.json.JSONObject;
 
+import org.json.*;
+import java.io.*;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -557,7 +560,7 @@ public class Books extends Activity implements SampleApplicationControl
         // Initialize the GLView with proper flags
         mGlView = new SampleApplicationGLView(this);
         mGlView.init(translucent, depthSize, stencilSize);
-        
+
         // Setups the Renderer of the GLView
         mRenderer = new BooksRenderer(this, vuforiaAppSession);
         mRenderer.mActivity = this;
@@ -597,20 +600,7 @@ public class Books extends Activity implements SampleApplicationControl
         }
     }
     
-    
-    /** Starts the WebView with the Book Extra Data */
-    public void startWebView(int value)
-    {
-        // Checks that we have a valid book data
-        if (mBookData != null)
-        {
-            // Starts an Intent to open the book URL
-            Intent viewIntent = new Intent("android.intent.action.VIEW",
-                Uri.parse(mBookData.getBookUrl()));
-            
-            startActivity(viewIntent);
-        }
-    }
+
     
     
     /** Returns the error message for each error code */
@@ -737,14 +727,16 @@ public class Books extends Activity implements SampleApplicationControl
         mGetBookDataTask = new GetBookDataTask();
         mGetBookDataTask.execute();
     }
-    
+
+
     /** Gets the book data from a JSON Object */
     private class GetBookDataTask extends AsyncTask<Void, Void, Void>
     {
         private String mBookDataJSONFullUrl;
         private static final String CHARSET = "UTF-8";
-        
-        
+
+
+
         protected void onPreExecute()
         {
             mIsLoadingBookData = true;
@@ -768,39 +760,39 @@ public class Books extends Activity implements SampleApplicationControl
 
             try
             {
-                // Connects to the Server to get the book data
-                URL url = new URL(mBookDataJSONFullUrl);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestProperty("Accept-Charset", CHARSET);
-                connection.connect();
-
-                int status = connection.getResponseCode();
-
-                // Checks that the book JSON url exists and connection
-                // has been successful
-                if (status != HttpURLConnection.HTTP_OK)
-                {
-                    // Cleans book data variables
-                    mBookData = null;
-                    mBookInfoStatus = BOOKINFO_NOT_DISPLAYED;
-                    
-                    // Hides loading dialog
-                    loadingDialogHandler.sendEmptyMessage(HIDE_LOADING_DIALOG);
-                    
-                    // Cleans current tracker Id and returns to scanning mode
-                    cleanTargetTrackedId();
-                    
-                    enterScanningMode();
-                }
-                
-                BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(connection.getInputStream()));
-                StringBuilder builder = new StringBuilder();
-                String line;
-                while ((line = reader.readLine()) != null)
-                {
-                    builder.append(line);
-                }
+//                // Connects to the Server to get the book data
+//                URL url = new URL(mBookDataJSONFullUrl);
+//                connection = (HttpURLConnection) url.openConnection();
+//                connection.setRequestProperty("Accept-Charset", CHARSET);
+//                connection.connect();
+//
+//                int status = connection.getResponseCode();
+//
+//                // Checks that the book JSON url exists and connection
+//                // has been successful
+//                if (status != HttpURLConnection.HTTP_OK)
+//                {
+//                    // Cleans book data variables
+//                    mBookData = null;
+//                    mBookInfoStatus = BOOKINFO_NOT_DISPLAYED;
+//
+//                    // Hides loading dialog
+//                    loadingDialogHandler.sendEmptyMessage(HIDE_LOADING_DIALOG);
+//
+//                    // Cleans current tracker Id and returns to scanning mode
+//                    cleanTargetTrackedId();
+//
+//                    enterScanningMode();
+//                }
+//
+//                BufferedReader reader = new BufferedReader(
+//                    new InputStreamReader(connection.getInputStream()));
+//                StringBuilder builder = new StringBuilder();
+//                String line;
+//                while ((line = reader.readLine()) != null)
+//                {
+//                    builder.append(line);
+//                }
                 
                 // Cleans any old reference to mBookData
                 if (mBookData != null)
@@ -809,35 +801,66 @@ public class Books extends Activity implements SampleApplicationControl
                     
                 }
 
-                JSONObject jsonObject = new JSONObject(builder.toString());
+                String json = null;
+
+                InputStream is = getAssets().open("companies.json");
+
+                int size = is.available();
+
+                byte[] buffer = new byte[size];
+
+                is.read(buffer);
+
+                is.close();
+
+                json = new String(buffer, "UTF-8");
+
+
+                JSONObject jsonObject = new JSONObject(json);
+                JSONArray jarr = new JSONArray(jsonObject.getJSONArray("companies").toString());
+
+                mBookData = new Book();
+
+                for (int i = 0; i < jarr.length(); i++)
+                {
+                    JSONObject temp = jarr.getJSONObject(i);
+                    if (temp.getString("name").equals(mBookJSONUrl)) {
+                        Log.d("CREATION", temp.getString("name"));
+                        mBookData.setName(temp.getString("name"));
+                        mBookData.setLocation(temp.getString("location"));
+//                        The Majors is messed up need to fix later
+                        mBookData.setMajors(temp.getString("primary_majors"));
+                        mBookData.setOpenings(temp.getString("open_positions"));
+                        mBookData.setDescription(temp.getString("description"));
+                        break;
+                    }
+                }
+//                System.out.println("Name: " + jsonObject.getString("name"));
+//                for(int i = 0; i < jarr.length(); i++) {
+//                    System.out.println("Keyword: " + jarr.getString(i));
+//                }
+
+//                JSONObject jsonObject = new JSONObject(builder.toString());
                 
                 // Generates a new Book Object with the JSON object data
-                mBookData = new Book();
+
                 
-                mBookData.setTitle(jsonObject.getString("title"));
-                mBookData.setAuthor(jsonObject.getString("author"));
-                mBookData.setBookUrl(jsonObject.getString("bookurl"));
-                mBookData.setPriceList(jsonObject.getString("list price"));
-                mBookData.setPriceYour(jsonObject.getString("your price"));
-                mBookData.setRatingAvg(jsonObject.getString("average rating"));
-                mBookData.setRatingTotal(jsonObject.getString("# of ratings"));
+
+
                 
-                // Gets the book thumb image
-                byte[] thumb = downloadImage(jsonObject.getString("thumburl"));
-                
-                if (thumb != null)
-                {
-                    
-                    Bitmap bitmap = BitmapFactory.decodeByteArray(thumb, 0,
-                        thumb.length);
-                    mBookData.setThumb(bitmap);
-                }
+//                if (thumb != null)
+//                {
+//
+//                    Bitmap bitmap = BitmapFactory.decodeByteArray(thumb, 0,
+//                        thumb.length);
+//                    mBookData.setThumb(bitmap);
+//                }
             } catch (Exception e)
             {
                 Log.d(LOGTAG, "Couldn't get books. e: " + e);
             } finally
             {
-                connection.disconnect();
+//                connection.disconnect();
             }
             
             return null;
@@ -927,37 +950,7 @@ public class Books extends Activity implements SampleApplicationControl
      * Downloads and image from an Url specified as a paremeter returns the
      * array of bytes with the image Data for storing it on the Local Database
      */
-    private byte[] downloadImage(final String imageUrl)
-    {
-        ByteArrayBuffer baf = null;
-        
-        try
-        {
-            URL url = new URL(imageUrl);
-            URLConnection ucon = url.openConnection();
-            InputStream is = ucon.getInputStream();
-            BufferedInputStream bis = new BufferedInputStream(is, 128);
-            baf = new ByteArrayBuffer(128);
-            
-            // get the bytes one by one
-            int current = 0;
-            while ((current = bis.read()) != -1)
-            {
-                baf.append((byte) current);
-            }
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-        
-        if (baf == null)
-        {
-            return null;
-        } else
-        {
-            return baf.toByteArray();
-        }
-    }
+
     
     
     /** Returns the current Book Data Texture */
@@ -970,13 +963,10 @@ public class Books extends Activity implements SampleApplicationControl
     /** Updates a BookOverlayView with the Book data specified in parameters */
     private void updateProductView(BookOverlayView productView, Book book)
     {
-        productView.setBookTitle(book.getTitle());
-        productView.setBookPrice(book.getPriceList());
-        productView.setYourPrice(book.getPriceYour());
-        productView.setBookRatingCount(book.getRatingTotal());
-        productView.setRating(book.getRatingAvg());
-        productView.setBookAuthor(book.getAuthor());
-        productView.setCoverViewFromBitmap(book.getThumb());
+        productView.setBookName(book.getName());
+        productView.setBookOpenings(book.getOpenings());
+        productView.setDescription(book.getDescription());
+        productView.setBookLocation(book.getLocation());
     }
     
     
@@ -1101,7 +1091,7 @@ public class Books extends Activity implements SampleApplicationControl
                     && y > screenUp)
                 {
                     // Starts the webView
-                    startWebView(0);
+
                     scanlineStart();
                 }
             }

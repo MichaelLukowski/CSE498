@@ -1,0 +1,108 @@
+{
+  "companies": [
+    {
+      "name": "Chicago Skyline Manufacturing",
+      "location": "Chicago, IL",
+      "primary_majors": [
+        "Mechanical Engineering",
+        "Electrical Engineering",
+        "Computer Science"
+      ],
+      "open_positions": [
+        "Software Engineer",
+        "Test Engineer"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit consectetur libero, ut consequat ipsum varius sed. Proin ut turpis pulvinar, blandit ipsum sed, sollicitudin augue. Nulla facilisi. Integer ac mauris sit amet lacus condimentum faucibus. Duis dignissim urna urna, in semper metus vestibulum sit amet. Maecenas pharetra ligula eu purus lacinia, non viverra sapien accumsan. Nam condimentum consequat quam, a gravida nulla viverra vitae. Etiam quis fringilla dui. Sed interdum a tellus quis accumsan. Maecenas convallis mattis purus. In lacinia pellentesque arcu. Duis vel felis eu felis elementum facilisis. Morbi tincidunt erat id augue facilisis ullamcorper. Ut hendrerit vehicula tristique. Etiam mollis porta metus, vel rhoncus urna molestie eu.",
+      "logo": "https://s3.amazonaws.com/recsolu-enterprise-app-ipas/capstone/sample-logos/chicago_skyline.png",
+      "url": "http://www.example.com/chicago-skyline-manufacturing"
+    },
+    {
+      "name": "Lake Michigan Partners",
+      "location": "Aurora, IL",
+      "primary_majors": [
+        "Computer Science",
+        "Math",
+        "Graphic Design"
+      ],
+      "open_positions": [
+        "Consultant",
+        "Software Engineer",
+        "Graphic Designer"
+      ],
+      "description": "Sed a faucibus sapien, ullamcorper rhoncus diam. Suspendisse eleifend interdum libero, a condimentum risus sodales ut. Aliquam erat volutpat. Mauris sodales cursus nibh ut ultricies. Cras efficitur faucibus nulla vel posuere. Fusce porta purus vitae justo pulvinar pellentesque. Fusce nec congue eros. Vivamus hendrerit lacinia convallis. Praesent scelerisque lobortis turpis eget imperdiet. Vestibulum ligula nisi, luctus et ex eu, maximus cursus leo. Sed iaculis laoreet interdum. Vestibulum orci velit, tempor quis ipsum vel, sollicitudin fringilla leo. Suspendisse non purus mattis, molestie tortor eget, efficitur risus. Morbi a tellus rutrum, pellentesque turpis non, sagittis nisl. Nunc convallis sed massa sed aliquet. Nullam neque urna, pulvinar sit amet ligula sit amet, porta lacinia nunc.",
+      "logo": "https://s3.amazonaws.com/recsolu-enterprise-app-ipas/capstone/sample-logos/lake_michigan_partners.png",
+      "url": "http://www.example.com/lake-michigan-partners"
+    },
+    {
+      "name": "Michigan Ave Retail",
+      "location": "Kenosha, WI",
+      "primary_majors": [
+        "Graphic Design",
+        "Computer Science"
+      ],
+      "open_positions": [
+        "Graphic Designer",
+        "iOS Engineer",
+        "Android Engineer",
+        "Web Engineer"
+      ],
+      "description": "Nulla semper faucibus augue quis aliquet. Nunc elementum pellentesque nunc quis ultricies. Praesent consequat sem elementum nibh fermentum, at molestie magna elementum. Cras auctor, nibh sed mollis semper, quam justo pretium ligula, ut finibus velit odio euismod odio. Phasellus convallis vel diam ut sollicitudin. Suspendisse tempor velit est, nec tincidunt nulla vulputate vitae. Mauris sit amet lacus suscipit, aliquet erat eget, rutrum diam. Nullam rhoncus pellentesque iaculis",
+      "logo": "https://s3.amazonaws.com/recsolu-enterprise-app-ipas/capstone/sample-logos/michigan_ave_retail.png",
+      "url": "http://www.example.com/michigan-ave-retail"
+    },
+    {
+      "name": "Millennium Park Bank",
+      "location": "Naperville, IL",
+      "primary_majors": [
+        "Computer Science",
+        "Math"
+      ],
+      "open_positions": [
+        "Web Engineer",
+        "Test Engineer",
+        "Consultant",
+        "Software Engineer"
+      ],
+      "description": "Vivamus rutrum convallis cursus. Ut ac auctor diam, in tristique erat. Vivamus in libero enim. Maecenas sapien orci, viverra eu facilisis vitae, interdum nec erat. Praesent finibus nunc quis erat molestie ultrices. Quisque non justo tortor. Ut iaculis viverra sagittis.",
+      "logo": "https://s3.amazonaws.com/recsolu-enterprise-app-ipas/capstone/sample-logos/millenium_park_bank.png",
+      "url": "http://www.example.com/millenium-park-bank"
+    },
+    {
+      "name": "Navy Pier Products, Inc.",
+      "location": "Oak Park, IL",
+      "primary_majors": [
+        "Computer Science",
+        "Mechanical Engineering",
+        "Electrical Engineering"
+      ],
+      "open_positions": [
+        "Software Engineer",
+        "iOS Engineer",
+        "Android Engineer",
+        "Web Engineer"
+      ],
+      "description": "In urna ante, convallis vel porta a, egestas sodales velit. Aenean diam nibh, bibendum in blandit eget, varius sit amet risus. Praesent vel eros fringilla, consequat tellus ornare, ultrices nisl. Proin ut tempor mi. In hac habitasse platea dictumst. Sed egestas nisl at arcu placerat mollis. Vestibulum sagittis tincidunt molestie. Praesent interdum odio suscipit, egestas arcu vel, ornare nisl. Nulla in congue urna, ac sollicitudin felis. Nunc id neque nec dolor sollicitudin posuere eu et est. Etiam eget augue nunc. Suspendisse eu rhoncus tortor. Pellentesque nunc dui, euismod et metus a, bibendum pretium tellus.",
+      "logo": "https://s3.amazonaws.com/recsolu-enterprise-app-ipas/capstone/sample-logos/navy_pier_products.png",
+      "url": "http://www.example.com/navy-pier-products"
+    },
+    {
+      "name": "Water Tower Consulting Group",
+      "location": "Skokie, IL",
+      "primary_majors": [
+        "Computer Science",
+        "Graphic Design",
+        "Graphic Design"
+      ],
+      "open_positions": [
+        "Graphic Designer",
+        "Front End Engineer",
+        "iOS Engineer",
+        "Android Engineer",
+        "Web Engineer"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit consectetur libero, ut consequat ipsum varius sed. Proin ut turpis pulvinar, blandit ipsum sed, sollicitudin augue. Nulla facilisi. Integer ac mauris sit amet lacus condimentum faucibus. Duis dignissim urna urna, in semper metus vestibulum sit amet. Maecenas pharetra ligula eu purus lacinia, non viverra sapien accumsan. Nam condimentum consequat quam, a gravida nulla viverra vitae. Etiam quis fringilla dui. Sed interdum a tellus quis accumsan. Maecenas convallis mattis purus. In lacinia pellentesque arcu. Duis vel felis eu felis elementum facilisis. Morbi tincidunt erat id augue facilisis ullamcorper. Ut hendrerit vehicula tristique. Etiam mollis porta metus, vel rhoncus urna molestie eu.",
+      "logo": "https://s3.amazonaws.com/recsolu-enterprise-app-ipas/capstone/sample-logos/water_tower_consulting.png",
+      "url": "http://www.example.com/water-tower-group"
+    }
+  ]
+}

@@ -15,15 +15,15 @@ import android.graphics.Bitmap;
 // A support class encapsulating the info for one book
 public class Book
 {
-    private String title;
-    private String author;
+    private String name;
+    private String location;
     private String ratingAvg;
     private String ratingTotal;
-    private String priceList;
-    private String priceYour;
+    private String open_positions;
+    private String description;
     private String targetId;
     private Bitmap thumb;
-    private String bookUrl;
+    private String majors;
     
     
     public Book()
@@ -32,27 +32,24 @@ public class Book
     }
     
     
-    public String getTitle()
+    public String getName()
     {
-        return title;
+        return name;
     }
     
     
-    public void setTitle(String title)
+    public void setName(String name){ this.name = name; }
+    
+    
+    public String getLocation()
     {
-        this.title = title;
+        return location;
     }
     
     
-    public String getAuthor()
+    public void setLocation(String location)
     {
-        return author;
-    }
-    
-    
-    public void setAuthor(String author)
-    {
-        this.author = author;
+        this.location = location;
     }
     
     
@@ -80,27 +77,27 @@ public class Book
     }
     
     
-    public String getPriceList()
+    public String getOpenings()
     {
-        return priceList;
+        return open_positions;
     }
     
     
-    public void setPriceList(String priceList)
+    public void setOpenings(String open_positions)
     {
-        this.priceList = priceList;
+        this.open_positions = open_positions;
     }
     
     
-    public String getPriceYour()
+    public String getDescription()
     {
-        return priceYour;
+        return description;
     }
     
     
-    public void setPriceYour(String priceYour)
+    public void setDescription(String description)
     {
-        this.priceYour = priceYour;
+        this.description = description;
     }
     
     
@@ -128,15 +125,15 @@ public class Book
     }
     
     
-    public String getBookUrl()
+    public String getMajors()
     {
-        return bookUrl;
+        return majors;
     }
     
     
-    public void setBookUrl(String bookUrl)
+    public void setMajors(String bookUrl)
     {
-        this.bookUrl = bookUrl;
+        this.majors = bookUrl;
     }
     
     

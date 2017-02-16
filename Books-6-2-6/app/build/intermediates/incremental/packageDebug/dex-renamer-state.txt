@@ -1,4 +1,4 @@
-#Sun Feb 12 16:51:06 EST 2017
+#Wed Feb 15 20:17:50 EST 2017
 base.0=C\:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_749e4639ce1e426a28c6fefcb96b3f58a2084ab8
 renamed.1=classes.dex
 renamed.0=classes2.dex

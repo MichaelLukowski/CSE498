@@ -5,33 +5,46 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="287134384908228"
+    timestamp="563448198154768"
     token="-6472390849623293742"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1207" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="353" />
+        duration="0" />
     <task
         name="verifier"
-        duration="130" />
-
-    <artifact
-        location="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\outputs\apk\Books-6-2-6-debug.apk"
-        type="MAIN" />
+        duration="0" />
 
     <build
-        timestamp="287134384908228"
+        timestamp="558747726631370"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\outputs\apk\Books-6-2-6-debug.apk"
             type="MAIN" />
     </build>
+    <build
+        timestamp="559603284029217"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="563250267582391"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="563448198154768"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
