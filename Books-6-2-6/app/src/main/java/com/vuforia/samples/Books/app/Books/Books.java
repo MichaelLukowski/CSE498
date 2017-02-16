@@ -756,44 +756,8 @@ public class Books extends Activity implements SampleApplicationControl
         
         protected Void doInBackground(Void... params)
         {
-            HttpURLConnection connection = null;
-
             try
             {
-//                // Connects to the Server to get the book data
-//                URL url = new URL(mBookDataJSONFullUrl);
-//                connection = (HttpURLConnection) url.openConnection();
-//                connection.setRequestProperty("Accept-Charset", CHARSET);
-//                connection.connect();
-//
-//                int status = connection.getResponseCode();
-//
-//                // Checks that the book JSON url exists and connection
-//                // has been successful
-//                if (status != HttpURLConnection.HTTP_OK)
-//                {
-//                    // Cleans book data variables
-//                    mBookData = null;
-//                    mBookInfoStatus = BOOKINFO_NOT_DISPLAYED;
-//
-//                    // Hides loading dialog
-//                    loadingDialogHandler.sendEmptyMessage(HIDE_LOADING_DIALOG);
-//
-//                    // Cleans current tracker Id and returns to scanning mode
-//                    cleanTargetTrackedId();
-//
-//                    enterScanningMode();
-//                }
-//
-//                BufferedReader reader = new BufferedReader(
-//                    new InputStreamReader(connection.getInputStream()));
-//                StringBuilder builder = new StringBuilder();
-//                String line;
-//                while ((line = reader.readLine()) != null)
-//                {
-//                    builder.append(line);
-//                }
-                
                 // Cleans any old reference to mBookData
                 if (mBookData != null)
                 {
@@ -835,26 +799,6 @@ public class Books extends Activity implements SampleApplicationControl
                         break;
                     }
                 }
-//                System.out.println("Name: " + jsonObject.getString("name"));
-//                for(int i = 0; i < jarr.length(); i++) {
-//                    System.out.println("Keyword: " + jarr.getString(i));
-//                }
-
-//                JSONObject jsonObject = new JSONObject(builder.toString());
-                
-                // Generates a new Book Object with the JSON object data
-
-                
-
-
-                
-//                if (thumb != null)
-//                {
-//
-//                    Bitmap bitmap = BitmapFactory.decodeByteArray(thumb, 0,
-//                        thumb.length);
-//                    mBookData.setThumb(bitmap);
-//                }
             } catch (Exception e)
             {
                 Log.d(LOGTAG, "Couldn't get books. e: " + e);

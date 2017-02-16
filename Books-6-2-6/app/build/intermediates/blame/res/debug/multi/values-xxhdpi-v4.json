@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
+        "outputFile": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,221 +11,7 @@
                     "endOffset": 93
                 },
                 "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 59,
-                        "endColumn": 42,
-                        "endOffset": 97
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 98,
-                    "endColumn": 41,
-                    "endOffset": 135
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 513,
-                        "endColumn": 41,
-                        "endOffset": 550
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 140,
-                    "endColumn": 49,
-                    "endOffset": 185
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 556,
-                        "endColumn": 49,
-                        "endOffset": 601
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 190,
-                    "endColumn": 45,
-                    "endOffset": 231
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 155,
-                        "endColumn": 45,
-                        "endOffset": 196
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 236,
-                    "endColumn": 48,
-                    "endOffset": 280
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 254,
-                        "endColumn": 48,
-                        "endOffset": 298
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 285,
-                    "endColumn": 52,
-                    "endOffset": 333
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 358,
-                        "endColumn": 52,
-                        "endOffset": 406
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 338,
-                    "endColumn": 50,
-                    "endOffset": 384
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 412,
-                        "endColumn": 50,
-                        "endOffset": 458
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 389,
-                    "endColumn": 50,
-                    "endOffset": 435
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 202,
-                        "endColumn": 50,
-                        "endOffset": 248
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 440,
-                    "endColumn": 45,
-                    "endOffset": 481
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 464,
-                        "endColumn": 45,
-                        "endOffset": 505
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 486,
-                    "endColumn": 44,
-                    "endOffset": 526
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 109,
-                        "endColumn": 44,
-                        "endOffset": 149
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 531,
-                    "endColumn": 52,
-                    "endOffset": 579
-                },
-                "from": {
-                    "file": "C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 304,
-                        "endColumn": 52,
-                        "endOffset": 352
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 42,
-                    "endOffset": 93
-                },
-                "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -244,7 +30,7 @@
                     "endOffset": 135
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -263,7 +49,7 @@
                     "endOffset": 185
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -282,7 +68,7 @@
                     "endOffset": 231
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -301,7 +87,7 @@
                     "endOffset": 280
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -320,7 +106,7 @@
                     "endOffset": 333
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -339,7 +125,7 @@
                     "endOffset": 384
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -358,7 +144,7 @@
                     "endOffset": 435
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -377,7 +163,7 @@
                     "endOffset": 481
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -396,7 +182,7 @@
                     "endOffset": 526
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -415,13 +201,441 @@
                     "endOffset": 579
                 },
                 "from": {
-                    "file": "C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\cse498\\AndroidStudioProjects\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
                         "startOffset": 295,
                         "endColumn": 52,
                         "endOffset": 343
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 42,
+                    "endOffset": 93
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 42,
+                        "endOffset": 94
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 98,
+                    "endColumn": 41,
+                    "endOffset": 135
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 499,
+                        "endColumn": 41,
+                        "endOffset": 536
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 140,
+                    "endColumn": 49,
+                    "endOffset": 185
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 541,
+                        "endColumn": 49,
+                        "endOffset": 586
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 190,
+                    "endColumn": 45,
+                    "endOffset": 231
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 149,
+                        "endColumn": 45,
+                        "endOffset": 190
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 236,
+                    "endColumn": 48,
+                    "endOffset": 280
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 246,
+                        "endColumn": 48,
+                        "endOffset": 290
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 285,
+                    "endColumn": 52,
+                    "endOffset": 333
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 348,
+                        "endColumn": 52,
+                        "endOffset": 396
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 338,
+                    "endColumn": 50,
+                    "endOffset": 384
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 401,
+                        "endColumn": 50,
+                        "endOffset": 447
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 389,
+                    "endColumn": 50,
+                    "endOffset": 435
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 195,
+                        "endColumn": 50,
+                        "endOffset": 241
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 440,
+                    "endColumn": 45,
+                    "endOffset": 481
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 452,
+                        "endColumn": 45,
+                        "endOffset": 493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 486,
+                    "endColumn": 44,
+                    "endOffset": 526
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 104,
+                        "endColumn": 44,
+                        "endOffset": 144
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 531,
+                    "endColumn": 52,
+                    "endOffset": 579
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 52,
+                        "endOffset": 343
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 42,
+                    "endOffset": 93
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 42,
+                        "endOffset": 97
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 98,
+                    "endColumn": 41,
+                    "endOffset": 135
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 513,
+                        "endColumn": 41,
+                        "endOffset": 550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 140,
+                    "endColumn": 49,
+                    "endOffset": 185
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 556,
+                        "endColumn": 49,
+                        "endOffset": 601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 190,
+                    "endColumn": 45,
+                    "endOffset": 231
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 155,
+                        "endColumn": 45,
+                        "endOffset": 196
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 236,
+                    "endColumn": 48,
+                    "endOffset": 280
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 254,
+                        "endColumn": 48,
+                        "endOffset": 298
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 285,
+                    "endColumn": 52,
+                    "endOffset": 333
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 358,
+                        "endColumn": 52,
+                        "endOffset": 406
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 338,
+                    "endColumn": 50,
+                    "endOffset": 384
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 412,
+                        "endColumn": 50,
+                        "endOffset": 458
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 389,
+                    "endColumn": 50,
+                    "endOffset": 435
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 202,
+                        "endColumn": 50,
+                        "endOffset": 248
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 440,
+                    "endColumn": 45,
+                    "endOffset": 481
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 464,
+                        "endColumn": 45,
+                        "endOffset": 505
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 486,
+                    "endColumn": 44,
+                    "endOffset": 526
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 109,
+                        "endColumn": 44,
+                        "endOffset": 149
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 531,
+                    "endColumn": 52,
+                    "endOffset": 579
+                },
+                "from": {
+                    "file": "/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 304,
+                        "endColumn": 52,
+                        "endOffset": 352
                     }
                 }
             }

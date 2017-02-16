@@ -5,46 +5,47 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="563448198154768"
+    timestamp="82445816799254"
     token="-6472390849623293742"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="394" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="31" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
+
+    <artifact
+        location="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="558747726631370"
+        timestamp="81293833998520"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\outputs\apk\Books-6-2-6-debug.apk"
+            location="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/outputs/apk/Books-6-2-6-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="559603284029217"
+        timestamp="82445816799254"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+            type="DEX" />
     </build>
     <build
         timestamp="563250267582391"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
+            location="/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/C:\Users\Michael\Desktop\CSE498\vuforia\vuforia-sdk-android-6-2-6\samples\Books-6-2-6\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
             type="DEX" />
     </build>
-    <build
-        timestamp="563448198154768"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

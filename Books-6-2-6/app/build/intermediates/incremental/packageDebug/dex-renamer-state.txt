@@ -1,7 +1,7 @@
-#Wed Feb 15 20:17:50 EST 2017
-base.0=C\:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_749e4639ce1e426a28c6fefcb96b3f58a2084ab8
+#Thu Feb 16 16:07:55 EST 2017
+base.0=/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55fade513fc173bf43346ebef08208dc68f5a7af
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d3b391565f30c2f4b7bd1ab7620b89e3fc45a6bf\\classes.dex
-base.1=C\:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d3b391565f30c2f4b7bd1ab7620b89e3fc45a6bf
-file.0=C\:\\Users\\Michael\\Desktop\\CSE498\\vuforia\\vuforia-sdk-android-6-2-6\\samples\\Books-6-2-6\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_749e4639ce1e426a28c6fefcb96b3f58a2084ab8\\classes.dex
+file.1=/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b20dfc25833056f5e1d7f24fe2dc44f96fe72af6/classes.dex
+base.1=/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b20dfc25833056f5e1d7f24fe2dc44f96fe72af6
+file.0=/Users/cse498/AndroidStudioProjects/vuforia-sdk-android-6-2-6/samples/Books-6-2-6/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55fade513fc173bf43346ebef08208dc68f5a7af/classes.dex
