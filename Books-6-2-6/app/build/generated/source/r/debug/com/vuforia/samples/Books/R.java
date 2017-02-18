@@ -49,27 +49,24 @@ public final class R {
     public static final class id {
         public static final int about_html_text=0x7f080002;
         public static final int about_text_title=0x7f080000;
-        public static final int badge_price_title=0x7f08000e;
-        public static final int badge_price_value=0x7f08000f;
+        public static final int badge_price_value=0x7f080003;
         public static final int button_start=0x7f080001;
-        public static final int camera_overlay_layout=0x7f080010;
-        public static final int custom_view_author=0x7f080009;
-        public static final int custom_view_book_background=0x7f080003;
-        public static final int custom_view_book_cover=0x7f080006;
-        public static final int custom_view_book_horizontal=0x7f080005;
-        public static final int custom_view_book_text_data=0x7f080007;
-        public static final int custom_view_information_container=0x7f080004;
-        public static final int custom_view_price_old=0x7f08000c;
-        public static final int custom_view_rating=0x7f08000a;
-        public static final int custom_view_rating_text=0x7f08000b;
-        public static final int custom_view_title=0x7f080008;
-        public static final int custom_view_touch_for_more=0x7f08000d;
-        public static final int loading_layout=0x7f080011;
-        public static final int logo_image=0x7f080016;
-        public static final int overlay_close_button=0x7f080012;
-        public static final int overlay_status=0x7f080013;
-        public static final int scan_line=0x7f080014;
-        public static final int splash_image=0x7f080015;
+        public static final int camera_overlay_layout=0x7f08000d;
+        public static final int custom_view_author=0x7f080004;
+        public static final int custom_view_book_background=0x7f08000b;
+        public static final int custom_view_book_horizontal=0x7f080007;
+        public static final int custom_view_book_text_data=0x7f080008;
+        public static final int custom_view_information_container=0x7f080006;
+        public static final int custom_view_price_old=0x7f08000a;
+        public static final int custom_view_rating_text=0x7f080009;
+        public static final int custom_view_title=0x7f080005;
+        public static final int frameLayout=0x7f08000c;
+        public static final int loading_layout=0x7f08000e;
+        public static final int logo_image=0x7f080013;
+        public static final int overlay_close_button=0x7f08000f;
+        public static final int overlay_status=0x7f080010;
+        public static final int scan_line=0x7f080011;
+        public static final int splash_image=0x7f080012;
     }
     public static final class layout {
         public static final int about_screen=0x7f030000;

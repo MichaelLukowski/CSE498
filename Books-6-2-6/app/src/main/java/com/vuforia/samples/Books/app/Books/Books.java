@@ -794,8 +794,25 @@ public class Books extends Activity implements SampleApplicationControl
                         mBookData.setLocation(temp.getString("location"));
 //                        The Majors is messed up need to fix later
                         mBookData.setMajors(temp.getString("primary_majors"));
-                        mBookData.setOpenings(temp.getString("open_positions"));
-                        mBookData.setDescription(temp.getString("description"));
+                        JSONArray openings = new JSONArray(temp.getJSONArray("open_positions").toString());
+                        String openStr = "";
+                        for (int k = 0; k < openings.length(); k++)
+                        {
+                            openStr += openings.getString(k);
+                            if (k != (openings.length() - 1) )
+                                openStr += ", ";
+                        }
+                        Log.d("CREATION", openStr);
+                        mBookData.setOpenings(openStr);
+                        JSONArray majors = new JSONArray(temp.getJSONArray("open_positions").toString());
+                        String majorStr = "";
+                        for (int k = 0; k < majors.length(); k++)
+                        {
+                            majorStr += majors.getString(k);
+                            if (k != (majors.length() - 1) )
+                                majorStr += ", ";
+                        }
+                        mBookData.setDescription(majorStr);
                         break;
                     }
                 }

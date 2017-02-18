@@ -4,22 +4,65 @@
     android:layout_height="wrap_content"
     android:padding="10dp" >
 
-    <ImageView
-        android:id="@+id/custom_view_book_background"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:contentDescription="@string/content_description_background"
-        android:scaleType="fitXY"
-        android:src="@drawable/custom_view_background" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/badge_price_value"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/overlay_price_value"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/custom_view_author"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/overlay_author"
+        android:layout_below="@+id/custom_view_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="250dip" />
+
+    <TextView
+        android:id="@+id/custom_view_title"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/overlay_title"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="250dip" />
 
     <LinearLayout
         android:id="@+id/custom_view_information_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:orientation="vertical"
-        android:paddingRight="30dp" >
+        android:paddingRight="30dp"
+        android:layout_below="@+id/custom_view_author"
+        android:layout_alignRight="@+id/custom_view_author"
+        android:layout_alignEnd="@+id/custom_view_author"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:id="@+id/custom_view_book_horizontal"
@@ -27,40 +70,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <ImageView
-                android:id="@+id/custom_view_book_cover"
-                android:layout_width="100dip"
-                android:layout_height="120dip"
-                android:layout_marginRight="10dp"
-                android:contentDescription="@string/content_description_cover"
-                android:scaleType="fitCenter" />
-
             <LinearLayout
                 android:id="@+id/custom_view_book_text_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/custom_view_title"
-                    android:layout_width="150dip"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginRight="10dp"
-                    android:maxLines="2"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/overlay_title"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/custom_view_author"
-                    android:layout_width="150dip"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="5dp"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/overlay_author" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -70,18 +84,9 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
-                    <RatingBar
-                        android:id="@+id/custom_view_rating"
-                        style="@style/starRatingBar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:numStars="5"
-                        android:rating="3" />
-
                     <TextView
                         android:id="@+id/custom_view_rating_text"
-                        android:layout_width="wrap_content"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
                         android:singleLine="true"
@@ -96,69 +101,28 @@
 
                     <TextView
                         android:id="@+id/custom_view_price_old"
-                        android:layout_width="wrap_content"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:singleLine="true"
                         android:textColor="@color/white"
                         android:textSize="@dimen/overlay_price_old" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/custom_view_strikethrough"
-                        android:contentDescription="@string/content_description_strike" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/custom_view_touch_for_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="10dp"
-            android:singleLine="true"
-            android:text="@string/book_data_touch_for_more"
-            android:textColor="@color/holo_light_blue"
-            android:textSize="@dimen/overlay_touch_for_more" />
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/custom_view_book_background"
-        android:layout_below="@id/custom_view_information_container" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/content_description_background"
-            android:src="@drawable/badge_background" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:rotation="20" >
-
-            <TextView
-                android:id="@+id/badge_price_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/book_data_your_price" />
-
-            <TextView
-                android:id="@+id/badge_price_value"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="@color/white"
-                android:textSize="@dimen/overlay_price_value"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/custom_view_book_background"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/content_description_background"
+        android:scaleType="fitXY"
+        android:src="@drawable/custom_view_background"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/frameLayout"
+        android:layout_toEndOf="@+id/frameLayout" />
 
 </RelativeLayout>

@@ -74,7 +74,7 @@ public class BookOverlayView extends RelativeLayout
     public void setBookOpenings(String bookOpenings)
     {
         TextView tv = (TextView) findViewById(R.id.custom_view_price_old);
-        tv.setText(getContext().getString(R.string.string_$) + bookOpenings);
+        tv.setText(bookOpenings);
     }
     
     
@@ -92,22 +92,22 @@ public class BookOverlayView extends RelativeLayout
     public void setDescription(String description)
     {
         TextView tv = (TextView) findViewById(R.id.badge_price_value);
-        tv.setText(getContext().getString(R.string.string_$) + description);
+        tv.setText(description);
     }
     
     
     // Sets Book Cover in View from a bitmap
-    public void setCoverViewFromBitmap(Bitmap coverBook)
-    {
-        ImageView iv = (ImageView) findViewById(R.id.custom_view_book_cover);
-        iv.setImageBitmap(coverBook);
-    }
-    
-    
-    // Sets Book Rating in View
-    public void setRating(String rating)
-    {
-        RatingBar rb = (RatingBar) findViewById(R.id.custom_view_rating);
-        rb.setRating(Float.parseFloat(rating));
-    }
+//    public void setCoverViewFromBitmap(Bitmap coverBook)
+//    {
+//        ImageView iv = (ImageView) findViewById(R.id.custom_view_book_cover);
+//        iv.setImageBitmap(coverBook);
+//    }
+//
+//
+//    // Sets Book Rating in View
+//    public void setRating(String rating)
+//    {
+//        RatingBar rb = (RatingBar) findViewById(R.id.custom_view_rating);
+//        rb.setRating(Float.parseFloat(rating));
+//    }
 }
