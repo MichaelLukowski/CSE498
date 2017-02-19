@@ -19,6 +19,8 @@ import android.view.WindowManager;
 
 import com.vuforia.samples.Books.R;
 
+import static android.R.attr.value;
+
 // This activity starts activities which demonstrate the YelloVision start menu
 public class YelloVisionLauncher extends Activity
 {
@@ -48,6 +50,8 @@ public class YelloVisionLauncher extends Activity
     }
 
     public void searchCompanies(View view){
-
+        Intent myIntent = new Intent(this, YelloVisionListing.class);
+//        myIntent.putExtra("key", value); //Optional parameters
+        startActivity(myIntent);
     }
 }
