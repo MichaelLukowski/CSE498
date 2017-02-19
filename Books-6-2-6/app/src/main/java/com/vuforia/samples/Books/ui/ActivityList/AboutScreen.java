@@ -9,13 +9,6 @@ countries.
 
 package com.vuforia.samples.Books.ui.ActivityList;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-import com.vuforia.samples.Books.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -29,6 +22,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.vuforia.samples.Books.R;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 public class AboutScreen extends Activity implements OnClickListener
@@ -86,11 +86,7 @@ public class AboutScreen extends Activity implements OnClickListener
         mStartButton = (Button) findViewById(R.id.button_start);
         mStartButton.setOnClickListener(this);
         
-        mAboutTextTitle = (TextView) findViewById(R.id.about_text_title);
-        mAboutTextTitle.setText(extras.getString("ABOUT_TEXT_TITLE"));
-        
     }
-    
     
     // Starts the chosen activity
     private void startARActivity()

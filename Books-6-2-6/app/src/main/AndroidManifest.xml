@@ -111,6 +111,12 @@
         	android:theme="@style/SampleAppsTheme"
  	        android:launchMode="singleTask"
             />
+
+        <activity
+            android:name=".ui.ActivityList.YelloVisionLauncher"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait"
+            />
         
     </application>
 

@@ -9,8 +9,6 @@ countries.
 
 package com.vuforia.samples.Books.ui.ActivityList;
 
-import com.vuforia.samples.Books.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,11 +19,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
+import com.vuforia.samples.Books.R;
+
 
 public class ActivitySplashScreen extends Activity
 {
     
-    private static long SPLASH_MILLIS = 450;
+    private static long SPLASH_MILLIS = 1000;
     
     
     @Override
@@ -53,11 +53,8 @@ public class ActivitySplashScreen extends Activity
             {
                 
                 Intent intent = new Intent(ActivitySplashScreen.this,
-                    AboutScreen.class);
-                intent.putExtra("ACTIVITY_TO_LAUNCH",
-                    "app.Books.Books");
-                intent.putExtra("ABOUT_TEXT_TITLE", "Books");
-                intent.putExtra("ABOUT_TEXT", "Books/CR_about.html");
+                    YelloVisionLauncher.class);
+
                 startActivity(intent);
                 
             }
