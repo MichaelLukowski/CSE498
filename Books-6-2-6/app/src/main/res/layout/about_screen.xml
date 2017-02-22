@@ -15,20 +15,22 @@
 
     <Button
         android:id="@+id/button_start"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="120dp"
-        android:paddingRight="100dp"
+        android:paddingRight="120dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:background="@android:color/holo_blue_light"
         android:textSize="@dimen/menu_title"
+        android:textColor="@color/white"
         android:fontFamily="sans-serif"
         android:text="@string/button_start"
         android:layout_x="93dp"
         android:layout_y="450dp"
-        android:layout_marginBottom="89dp"
+        android:layout_marginBottom="8dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
