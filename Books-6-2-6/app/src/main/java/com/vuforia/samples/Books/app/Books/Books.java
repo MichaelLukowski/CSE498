@@ -12,6 +12,7 @@ package com.vuforia.samples.Books.app.Books;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -53,6 +54,8 @@ import com.vuforia.Tracker;
 import com.vuforia.TrackerManager;
 import com.vuforia.Vuforia;
 import com.vuforia.samples.Books.R;
+import com.vuforia.samples.Books.ui.ActivityList.CompanyDetails;
+import com.vuforia.samples.Books.ui.ActivityList.YelloVisionLauncher;
 import com.vuforia.samples.SampleApplication.SampleApplicationControl;
 import com.vuforia.samples.SampleApplication.SampleApplicationException;
 import com.vuforia.samples.SampleApplication.SampleApplicationSession;
@@ -60,7 +63,7 @@ import com.vuforia.samples.SampleApplication.utils.LoadingDialogHandler;
 import com.vuforia.samples.SampleApplication.utils.SampleApplicationGLView;
 import com.vuforia.samples.SampleApplication.utils.Texture;
 
-import org.apache.http.util.ByteArrayBuffer;
+//import org.apache.http.util.ByteArrayBuffer;
 import org.json.JSONObject;
 
 import org.json.*;
@@ -143,6 +146,7 @@ public class Books extends Activity implements SampleApplicationControl
     private RelativeLayout mUILayout;
     private TextView mStatusBar;
     private Button mCloseButton;
+    private Button mMoreDetailsButton;
 
     
     // Error message handling:
@@ -259,8 +263,8 @@ public class Books extends Activity implements SampleApplicationControl
         {
             mBooks = new WeakReference<Books>(books);
         }
-        
-        
+
+
         public void handleMessage(Message msg)
         {
             Books books = mBooks.get();
@@ -309,9 +313,11 @@ public class Books extends Activity implements SampleApplicationControl
                 if (msg.what == SHOW_2D_OVERLAY)
                 {
                     books.mCloseButton.setVisibility(View.VISIBLE);
+                    books.mMoreDetailsButton.setVisibility(View.VISIBLE);
                 } else
                 {
                     books.mCloseButton.setVisibility(View.GONE);
+                    books.mMoreDetailsButton.setVisibility(View.GONE);
                 }
             }
         }
@@ -509,6 +515,9 @@ public class Books extends Activity implements SampleApplicationControl
         // Gets a reference to the Close Button
         mCloseButton = (Button) mUILayout
             .findViewById(R.id.overlay_close_button);
+
+        mMoreDetailsButton = (Button) mUILayout
+                .findViewById(R.id.more_details_button);
         
         // Sets the Close Button functionality
         mCloseButton.setOnClickListener(new OnClickListener()
@@ -517,23 +526,59 @@ public class Books extends Activity implements SampleApplicationControl
             {
                 // Updates application status
                 mBookInfoStatus = BOOKINFO_NOT_DISPLAYED;
-                
+
                 loadingDialogHandler.sendEmptyMessage(HIDE_LOADING_DIALOG);
-                
+
                 // Checks if the app is currently loading a book data
                 if (mIsLoadingBookData)
                 {
-                    
+
                     // Cancels the AsyncTask
                     mGetBookDataTask.cancel(true);
                     mIsLoadingBookData = false;
-                    
+
                     // Cleans the Target Tracker Id
                     cleanTargetTrackedId();
                 }
-                
+
                 // Enters Scanning Mode
                 enterScanningMode();
+            }
+        });
+
+        mMoreDetailsButton.setOnClickListener(new OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                // Updates application status
+//                mBookInfoStatus = BOOKINFO_NOT_DISPLAYED;
+//
+//                loadingDialogHandler.sendEmptyMessage(HIDE_LOADING_DIALOG);
+//
+//                // Checks if the app is currently loading a book data
+//                if (mIsLoadingBookData)
+//                {
+//
+//                    // Cancels the AsyncTask
+//                    mGetBookDataTask.cancel(true);
+//                    mIsLoadingBookData = false;
+//
+//                    // Cleans the Target Tracker Id
+//                    cleanTargetTrackedId();
+//
+//
+//                }
+//
+//                deinitBooks();
+
+                Intent intent = new Intent(mActivity, CompanyDetails.class);
+                Log.d("CREATION", mBookData.getName());
+                intent.putExtra("COMPANY_NAME", mBookData.getName());
+
+                startActivity(intent);
+//
+//                // Enters Scanning Mode
+//                enterScanningMode();
             }
         });
         
@@ -955,6 +1000,13 @@ public class Books extends Activity implements SampleApplicationControl
         
         // Remember we are in content mode:
         mRenderer.setScanningMode(false);
+
+//        final Button button = (Button) findViewById(R.id.more_details_button);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//
+//            }
+//        });
     }
     
     

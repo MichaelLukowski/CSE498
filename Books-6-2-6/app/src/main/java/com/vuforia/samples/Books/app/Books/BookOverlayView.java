@@ -52,13 +52,15 @@ public class BookOverlayView extends RelativeLayout
         // Generates the layout for the view
         inflater.inflate(R.layout.bitmap_layout, this, true);
     }
-    
+
     
     // Sets Book title in View
     public void setBookName(String bookName)
     {
         TextView tv = (TextView) findViewById(R.id.custom_view_title);
+        //TextView tv2 = (TextView) findViewById(R.id.company_view_name);
         tv.setText(bookName);
+        //tv2.setText(bookName);
     }
     
     
@@ -94,7 +96,7 @@ public class BookOverlayView extends RelativeLayout
         TextView tv = (TextView) findViewById(R.id.badge_price_value);
         tv.setText(description);
     }
-    
+
     
     // Sets Book Cover in View from a bitmap
 //    public void setCoverViewFromBitmap(Bitmap coverBook)
