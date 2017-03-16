@@ -4,12 +4,29 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent" android:background="@color/white">
 
+    <Button
+        android:id="@+id/search_companies"
+        android:text="@string/search_companies_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:textSize="@dimen/menu_title"
+        android:background="@color/yello_normal"
+        android:onClick="searchCompanies"
+        android:layout_marginBottom="68dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
     <ImageView
         android:src="@drawable/yello_logo"
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="197dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="84dp"
         android:layout_above="@+id/scan_logo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -24,29 +41,14 @@
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:textSize="@dimen/menu_title"
-        android:background="@android:color/holo_blue_light"
+        android:background="@color/yello_normal"
         android:onClick="scanLogo"
         android:layout_marginBottom="21dp"
+        android:textColor="@color/white"
         android:layout_above="@+id/search_companies"
         android:layout_alignLeft="@+id/search_companies"
         android:layout_alignStart="@+id/search_companies"
         android:layout_alignRight="@+id/search_companies"
         android:layout_alignEnd="@+id/search_companies" />
-
-    <Button
-        android:id="@+id/search_companies"
-        android:text="@string/search_companies_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:textSize="@dimen/menu_title"
-        android:background="@android:color/holo_blue_light"
-        android:onClick="searchCompanies"
-        android:layout_marginBottom="89dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
