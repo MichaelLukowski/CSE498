@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Books</string>
-    <string name="app_description">Vuforia Books Sample Applications</string>
+    <string name="app_name">YelloVision</string>
+    <string name="app_description">Find company information from logos</string>
     <string name="button_start">Start</string>
     <string name="button_OK">OK</string>
     <string name="string_$">$</string>
@@ -53,4 +53,14 @@
 
     <string name="scan_logo_button">Scan Logo</string>
     <string name="search_companies_button">Search Companies</string>
+    <string name="more_details">More Details</string>
+    <string name="share">Share</string>
+
+    <!--Content is filled after 'More Details' button is pressed-->
+    <!--<string name="more_details_company_name"></string>-->
+    <!--<string name="more_details_location"></string>-->
+    <!--<string name="more_details_description"></string>-->
+    <!--<string name="more_details_majors"></string>-->
+    <!--<string name="more_details_open_positions"></string>-->
+
 </resources>
