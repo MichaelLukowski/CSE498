@@ -125,28 +125,11 @@ public class CompanyDetails extends AppCompatActivity {
 
         actionBar.setTitle(mCompanyName);
     }
-    public void shareText(View view) {
-        Intent intent = new Intent(android.content.Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        String shareBodyText = mCompanyName + "\n\n\n" +
-                mCompanyLocation + "\n\n" + mCompanyDescription +
-                "\n\nPrimary Majors\n" + mCompanyMajors + "\n\nOpen Positions\n" +
-                mCompanyPositions;
-        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Opportunities at " + mCompanyName);
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
-        startActivity(Intent.createChooser(intent, "Choose sharing method.."));
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate menu resource file.
         getMenuInflater().inflate(R.menu.share_menu, menu);
-
-        // Locate MenuItem with ShareActionProvider
-        //MenuItem item = menu.findItem(R.id.menu_item_share);
-
-        // Fetch and store ShareActionProvider
-        //mShareActionProvider = (ShareActionProvider) item.getActionProvider();
 
         // Return true to display menu
         return true;
@@ -164,8 +147,6 @@ public class CompanyDetails extends AppCompatActivity {
 
                 Intent emailIntent = new Intent();
                 emailIntent.setAction(Intent.ACTION_SEND);
-
-                // Native email client doesn't currently support HTML, but it doesn't hurt to try in case they fix it
                 emailIntent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Career Opportunity at " + mCompanyName);
                 emailIntent.setType("text/plain");
@@ -223,11 +204,4 @@ public class CompanyDetails extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    // Call to update the share intent
-    /*private void setShareIntent(Intent shareIntent) {
-        if (mShareActionProvider != null) {
-            mShareActionProvider.setShareIntent(shareIntent);
-        }
-    }*/
 }

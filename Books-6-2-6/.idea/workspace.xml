@@ -15,12 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aa6461d-9288-447b-ada6-c7dbe3aafb01" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/Books/ui/ActivityList/CompanyDetails.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/Books/ui/ActivityList/CompanyDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/more_details_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/more_details_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="Books-6-2-6.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,11 +111,11 @@
       <file leaf-file-name="CompanyDetails.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/Books/ui/ActivityList/CompanyDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="172" column="56" selection-start-line="172" selection-start-column="56" selection-end-line="172" selection-end-column="56" />
+            <state relative-caret-position="118">
+              <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7051#7066#0" expanded="true" />
+                <element signature="e#6037#6052#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3037,11 +3032,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/vuforia/samples/Books/ui/ActivityList/CompanyDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="172" column="56" selection-start-line="172" selection-start-column="56" selection-end-line="172" selection-end-column="56" />
+        <state relative-caret-position="118">
+          <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7051#7066#0" expanded="true" />
+            <element signature="e#6037#6052#0" expanded="true" />
           </folding>
         </state>
       </provider>
