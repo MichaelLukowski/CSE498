@@ -6,14 +6,26 @@ package com.vuforia.samples.Books.ui.ActivityList;
 import com.vuforia.samples.Books.R;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.LabeledIntent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.ShareActionProvider;
 import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
+//import android.text.Html;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,30 +34,35 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class CompanyDetails extends Activity {
+public class CompanyDetails extends AppCompatActivity {
 
-    private TextView mCompanyName;
+    private String mCompanyName;
+    private String mCompanyUrl;
     private TextView mCompanyLocation;
     private TextView mCompanyDescription;
     private TextView mCompanyMajors;
     private TextView mCompanyPositions;
+
+    private ShareActionProvider mShareActionProvider;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         Bundle extras = getIntent().getExtras();
         String nameString = extras.getString("COMPANY_NAME");
 
         setContentView(R.layout.more_details_layout);
 
-        mCompanyName = (TextView) findViewById(R.id.more_details_company_name);
+        Toolbar detailsToolbar = (Toolbar) findViewById(R.id.details_toolbar);
+        setSupportActionBar(detailsToolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        mCompanyName = "";
         mCompanyLocation = (TextView) findViewById(R.id.more_details_location);
         mCompanyDescription = (TextView) findViewById(R.id.more_details_description);
         mCompanyMajors = (TextView) findViewById(R.id.more_details_majors);
@@ -68,9 +85,10 @@ public class CompanyDetails extends Activity {
                 if (temp.getString("name").equals(nameString)) {
 
 //                    Log.d("CREATION", temp.getString("name"));
-                    mCompanyName.setText(temp.getString("name"));
+                    mCompanyName = temp.getString("name");
                     mCompanyLocation.setText(temp.getString("location"));
                     mCompanyDescription.setText(temp.getString("description"));
+                    mCompanyUrl = temp.getString("url");
 
                     JSONArray majors = new JSONArray(temp.getJSONArray("primary_majors").toString());
                     String majorStr = "";
@@ -103,6 +121,87 @@ public class CompanyDetails extends Activity {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+
+        actionBar.setTitle(mCompanyName);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate menu resource file.
+        getMenuInflater().inflate(R.menu.share_menu, menu);
+
+        // Return true to display menu
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_item_share:
+
+                String shareBodyText = "Career opportunity at " + mCompanyName + " in " +
+                        mCompanyLocation.getText().toString() + "\n\nPrimary Majors: " +
+                        mCompanyMajors.getText().toString() + "\n\nOpen Positions: " +
+                        mCompanyPositions.getText().toString() + "\n\nFor more details visit: " + mCompanyUrl;
+
+                Intent emailIntent = new Intent();
+                emailIntent.setAction(Intent.ACTION_SEND);
+                emailIntent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Career Opportunity at " + mCompanyName);
+                emailIntent.setType("text/plain");
+
+                PackageManager pm = getPackageManager();
+
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+
+                Intent inChooser = Intent.createChooser(emailIntent, "Choose sharing method..");
+                List<ResolveInfo> resInfo = pm.queryIntentActivities(sharingIntent, 0);
+                List<LabeledIntent> intentList = new ArrayList<LabeledIntent>();
+
+                for (int i = 0; i < resInfo.size(); i++) {
+                    // Extract the label, append it, and repackage it in a LabeledIntent
+                    ResolveInfo ri = resInfo.get(i);
+                    String packageName = ri.activityInfo.packageName;
+                    if(packageName.contains("twitter") || packageName.contains("facebook") || packageName.contains("mms") || packageName.contains("android.gm")) {
+                        Intent intent = new Intent();
+                        intent.setComponent(new ComponentName(packageName, ri.activityInfo.name));
+                        intent.setAction(Intent.ACTION_SEND);
+                        intent.setType("text/plain");
+                        if(packageName.contains("twitter")) {
+                            String shareTwitterBodyText = "Career opportunity at " + mCompanyName + " in " +
+                                    mCompanyLocation.getText().toString() + "\n\nFor more details visit: " + mCompanyUrl;
+                            intent.putExtra(Intent.EXTRA_TEXT, shareTwitterBodyText);
+                        } else if(packageName.contains("facebook")) {
+                            intent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
+                        } else if(packageName.contains("mms")) {
+                            intent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
+                        } else if(packageName.contains("outlook")) {
+                            intent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
+                            intent.putExtra(Intent.EXTRA_SUBJECT, "Career Opportunity at " + mCompanyName);
+                            intent.setType("message/rfc822");
+                        } else if(packageName.contains("android.gm")){
+                            intent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
+                            intent.putExtra(Intent.EXTRA_SUBJECT, "Career Opportunity at " + mCompanyName);
+                            intent.setType("text/plain");
+                        }
+
+
+                        intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
+                    }
+                }
+
+                // convert intentList to array
+                LabeledIntent[] extraIntents = intentList.toArray( new LabeledIntent[ intentList.size() ]);
+
+                inChooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents);
+                startActivity(inChooser);
+
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

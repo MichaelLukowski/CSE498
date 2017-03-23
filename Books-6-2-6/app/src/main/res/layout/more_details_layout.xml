@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1" android:background="@color/white">
 
-    <TextView
-        android:id="@+id/more_details_company_name"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/details_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/semi_transparent_black"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_weight="0.01"
-        android:paddingLeft="15dp"
-        android:layout_marginTop="@dimen/menu_title"/>
+        android:background="@color/yello_normal"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/more_details_company_name"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/semi_transparent_black"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_weight="0.01"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:layout_marginTop="@dimen/menu_title"/>-->
 
     <TextView
         android:id="@+id/more_details_location"
@@ -21,7 +31,8 @@
         android:layout_height="wrap_content"
         android:textColor="@color/semi_transparent_black"
         android:layout_weight="0.06"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"/>
 
     <TextView
         android:id="@+id/more_details_description"
@@ -29,7 +40,8 @@
         android:layout_height="wrap_content"
         android:textColor="@color/semi_transparent_black"
         android:layout_weight="0.04"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"/>
 
     <TextView
         android:text="Primary Majors"
@@ -48,7 +60,8 @@
         android:layout_height="wrap_content"
         android:textColor="@color/semi_transparent_black"
         android:layout_weight="0.02"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"/>
 
     <TextView
         android:text="Open Positions"
@@ -59,7 +72,7 @@
         android:textSize="17sp"
         android:id="@+id/more_details_open_positions_textview"
         android:layout_weight="0.01"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp" />
 
     <TextView
         android:id="@+id/more_details_open_positions"
@@ -67,6 +80,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/semi_transparent_black"
         android:layout_weight="0.01"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"/>
 
 </LinearLayout>
