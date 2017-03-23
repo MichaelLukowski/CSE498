@@ -62,13 +62,15 @@
       would allow the activity to be launched multiple times.
     -->
     <application
-        android:icon="@drawable/icon"
+        android:icon="@drawable/yello_logo"
         android:label="@string/app_name"
         android:description="@string/app_description"
         android:launchMode="singleTask"
         android:allowBackup="true"
-        android:theme="@style/SampleAppsTheme"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         >
+        <!--android:theme="@style/SampleAppsTheme"-->
+
         
 
          <!--
