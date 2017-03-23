@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="yello_normal">#0EAACE</color>
+    <color name="yello_normal">#0eaace</color>
     <color name="yello_opacity1">#B20EAACE</color> <!--opacity 0.7-->
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>

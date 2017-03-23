@@ -54,6 +54,7 @@
     <string name="scan_logo_button">Scan Logo</string>
     <string name="search_companies_button">Search Companies</string>
     <string name="more_details">More Details</string>
+    <string name="share">Share</string>
 
     <!--Content is filled after 'More Details' button is pressed-->
     <!--<string name="more_details_company_name"></string>-->
