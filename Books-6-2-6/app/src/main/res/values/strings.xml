@@ -52,6 +52,7 @@
     <string name="INIT_LICENSE_ERROR_UNKNOWN_ERROR">Failed to initialize Vuforia.</string>
 
     <string name="scan_logo_button">Scan Logo</string>
+    <string name="user_info_button">User Info</string>
     <string name="search_companies_button">Search Companies</string>
     <string name="more_details">More Details</string>
     <string name="share">Share</string>

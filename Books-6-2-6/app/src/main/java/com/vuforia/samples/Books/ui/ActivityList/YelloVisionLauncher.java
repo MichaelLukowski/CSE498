@@ -54,4 +54,9 @@ public class YelloVisionLauncher extends Activity
 //        myIntent.putExtra("key", value); //Optional parameters
         startActivity(myIntent);
     }
+
+    public void userInfo(View view){
+        Intent something = new Intent(this, YelloVisionInfo.class);
+        startActivity(something);
+    }
 }
