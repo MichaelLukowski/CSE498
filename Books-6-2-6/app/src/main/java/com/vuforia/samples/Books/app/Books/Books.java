@@ -43,6 +43,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vuforia.CameraDevice;
 import com.vuforia.ObjectTracker;
@@ -803,6 +804,26 @@ public class Books extends Activity implements SampleApplicationControl
         {
             try
             {
+
+                try {
+                    FileInputStream fileIn=openFileInput("user.txt");
+                    InputStreamReader InputRead= new InputStreamReader(fileIn);
+
+                    char[] inputBuffer= new char[100];
+                    String s="";
+                    int charRead;
+
+                    while ((charRead=InputRead.read(inputBuffer))>0) {
+                        // char to string conversion
+                        String readstring=String.copyValueOf(inputBuffer,0,charRead);
+                        s +=readstring;
+                    }
+                    InputRead.close();
+                    Toast.makeText(getBaseContext(), s,Toast.LENGTH_SHORT).show();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 // Cleans any old reference to mBookData
                 if (mBookData != null)
                 {
