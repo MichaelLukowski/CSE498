@@ -6,12 +6,18 @@ package com.vuforia.samples.Books.ui.ActivityList;
 
 public class Company {
     private String name;
+    private Boolean match;
 
-    public Company(String name){
+    public Company(String name, Boolean match){
         this.name = name;
+        this.match = match;
     }
 
     public String getName(){
         return name;
+    }
+
+    public Boolean isMatch(){
+        return match;
     }
 }

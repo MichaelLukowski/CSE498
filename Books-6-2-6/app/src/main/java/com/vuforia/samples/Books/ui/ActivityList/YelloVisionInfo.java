@@ -114,9 +114,9 @@ public class YelloVisionInfo extends Activity {
         try {
             FileOutputStream fileout=openFileOutput("user.txt", MODE_PRIVATE);
             OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
-            outputWriter.write(major.toString());
+            outputWriter.write(major);
             outputWriter.write("\n");
-            outputWriter.write(occ.toString());
+            outputWriter.write(occ);
             outputWriter.close();
 
             //display file saved message

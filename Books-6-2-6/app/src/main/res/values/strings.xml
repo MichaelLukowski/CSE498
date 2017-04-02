@@ -10,8 +10,8 @@
     <string name="string_closeParentheses">)</string>
     <string name="string_ratings">ratings</string>
     <string name="status_bar_scanning">Scanning</string>
-    <string name="content_desc_vuforia_logo">Vuforia Logo</string>
-    <string name="content_desc_vuforia_background">Vuforia Background</string>
+    <string name="content_desc_yellovision_logo">YelloVision Logo</string>
+    <string name="content_desc_yellovision_background">YelloVision Background</string>
     <string name="book_data_your_price">Your Price</string>
     <string name="content_description_cover">Cover</string>
     <string name="content_description_strike">Strike</string>
