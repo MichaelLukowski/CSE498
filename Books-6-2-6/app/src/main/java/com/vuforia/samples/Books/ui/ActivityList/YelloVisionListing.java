@@ -90,13 +90,13 @@ public class YelloVisionListing extends Activity implements SearchView.OnQueryTe
                 JSONArray company_majors = new JSONArray(temp.getJSONArray("primary_majors").toString());
                 for (int k = 0; k < company_majors.length(); k++)
                 {
-                    qualifiedMajors.add(company_majors.getString(k).toLowerCase().trim());
+                    qualifiedMajors.add(company_majors.getString(k).toLowerCase());
                 }
 
                 JSONArray company_positions = new JSONArray(temp.getJSONArray("open_positions").toString());
                 for (int k = 0; k < company_positions.length(); k++)
                 {
-                    availablePositions.add(company_positions.getString(k).toLowerCase().trim());
+                    availablePositions.add(company_positions.getString(k).toLowerCase());
                 }
 
                 Boolean isMatch = checkCompanyMatch(qualifiedMajors, availablePositions);
@@ -181,15 +181,16 @@ public class YelloVisionListing extends Activity implements SearchView.OnQueryTe
 
             inputRead.close();
 
-            majors = majorsData.toString().toLowerCase().trim();
-            positions = positionsData.toString().toLowerCase().trim();
+            majors = majorsData.toString().toLowerCase();
+            positions = positionsData.toString().toLowerCase();
 
             List<String> majorsMatch = new ArrayList<String>(Arrays.asList(majors.split(",")));
             List<String> positionsMatch = new ArrayList<String>(Arrays.asList(positions.split(",")));
 
             for(int i = 0; i < majorsMatch.size(); i++){
+                Log.d("Major", majorsMatch.get(i));
                 for(int j = 0; j < companyMajors.size(); j++){
-                    if(majorsMatch.get(i).equals(companyMajors.get(j))){
+                    if(majorsMatch.get(i).trim().equals(companyMajors.get(j).trim())){
                         return true;
                     }
                 }
@@ -197,7 +198,7 @@ public class YelloVisionListing extends Activity implements SearchView.OnQueryTe
 
             for(int i = 0; i < positionsMatch.size(); i++){
                 for(int j = 0; j < companyPositions.size(); j++){
-                    if(positionsMatch.get(i).equals(companyPositions.get(j))){
+                    if(positionsMatch.get(i).trim().equals(companyPositions.get(j).trim())){
                         return true;
                     }
                 }
