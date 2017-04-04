@@ -10,6 +10,7 @@ countries.
 package com.vuforia.samples.Books.app.Books;
 
 import android.graphics.Bitmap;
+import android.widget.ImageView;
 
 
 // A support class encapsulating the info for one book
@@ -22,7 +23,6 @@ public class Book
     private String open_positions;
     private String description;
     private String targetId;
-    private Bitmap thumb;
     private String majors;
     
     
@@ -113,18 +113,6 @@ public class Book
     }
     
     
-    public Bitmap getThumb()
-    {
-        return thumb;
-    }
-    
-    
-    public void setThumb(Bitmap thumb)
-    {
-        this.thumb = thumb;
-    }
-    
-    
     public String getMajors()
     {
         return majors;
@@ -135,12 +123,5 @@ public class Book
     {
         this.majors = bookUrl;
     }
-    
-    
-    public void recycle()
-    {
-        // Cleans the Thumb bitmap variable
-        thumb.recycle();
-        thumb = null;
-    }
+
 }

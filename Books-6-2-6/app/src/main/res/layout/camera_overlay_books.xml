@@ -27,8 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/close_button_background"
-        android:visibility="gone" />
+        android:background="@drawable/close_button_background"/>
 
     <TextView
         android:id="@+id/overlay_status"
@@ -45,28 +44,56 @@
         android:paddingTop="10dp"
         android:text="@string/status_bar_scanning"
         android:textColor="@color/white"
-        android:textSize="@dimen/overlay_status"
-        android:visibility="gone" />
+        android:textSize="@dimen/overlay_status" />
 
     <ImageView
         android:id="@+id/scan_line"
         android:layout_width="match_parent"
         android:layout_height="50px"
         android:src="@drawable/scanline"
-        android:scaleType="fitXY"
-        android:visibility="gone"/>
+        android:scaleType="fitXY"/>
 
     <Button
         android:id="@+id/more_details_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/yello_opacity1"
-        android:textColor="@color/white"
+        android:background="@color/yello_opacity2"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/more_details"
-        android:visibility="gone"
-        />
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/thumbs_up_scan"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@color/yello_opacity2"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/thumbs_up"
+        android:layout_below="@+id/loading_layout"
+        android:layout_alignLeft="@+id/thumbs_down_scan"
+        android:layout_alignStart="@+id/thumbs_down_scan"
+        android:layout_alignBottom="@+id/more_details_button" />
+
+    <ImageView
+        android:id="@+id/thumbs_down_scan"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@color/yello_opacity2"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/thumbs_down"
+        android:layout_below="@+id/loading_layout"
+        android:layout_toRightOf="@+id/more_details_button"
+        android:layout_toEndOf="@+id/more_details_button"
+        android:layout_alignBottom="@+id/more_details_button" />
+
 </RelativeLayout>

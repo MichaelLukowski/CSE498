@@ -188,7 +188,6 @@ public class YelloVisionListing extends Activity implements SearchView.OnQueryTe
             List<String> positionsMatch = new ArrayList<String>(Arrays.asList(positions.split(",")));
 
             for(int i = 0; i < majorsMatch.size(); i++){
-                Log.d("Major", majorsMatch.get(i));
                 for(int j = 0; j < companyMajors.size(); j++){
                     if(majorsMatch.get(i).trim().equals(companyMajors.get(j).trim())){
                         return true;

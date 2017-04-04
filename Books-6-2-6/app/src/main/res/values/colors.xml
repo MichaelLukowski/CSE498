@@ -3,6 +3,7 @@
 
     <color name="yello_normal">#0eaace</color>
     <color name="yello_opacity1">#67cce2</color> <!--opacity 0.7-->
+    <color name="yello_opacity2">#ebf9fc</color> <!--opacity 0.7-->
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="gray">#575757</color>

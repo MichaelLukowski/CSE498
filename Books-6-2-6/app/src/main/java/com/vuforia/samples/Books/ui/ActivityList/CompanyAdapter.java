@@ -115,8 +115,10 @@ public class CompanyAdapter extends BaseAdapter implements Filterable {
 
         if(companyArrayList.get(position).isMatch()){
             holder.thumbs_up.setVisibility(View.VISIBLE);
+            holder.thumbs_down.setVisibility(View.INVISIBLE);
         }else {
             holder.thumbs_down.setVisibility(View.VISIBLE);
+            holder.thumbs_up.setVisibility(View.INVISIBLE);
         }
 
         return convertView;
