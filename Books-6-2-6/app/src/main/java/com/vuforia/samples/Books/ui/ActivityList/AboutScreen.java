@@ -46,11 +46,7 @@ public class AboutScreen extends Activity implements OnClickListener
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
+
         setContentView(R.layout.about_screen);
         
         Bundle extras = getIntent().getExtras();
@@ -95,7 +91,7 @@ public class AboutScreen extends Activity implements OnClickListener
         i.setClassName(mClassToLaunchPackage, mClassToLaunch);
         startActivity(i);
     }
-    
+
     
     @Override
     public void onClick(View v)

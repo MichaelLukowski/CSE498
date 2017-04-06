@@ -41,8 +41,10 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vuforia.CameraDevice;
 import com.vuforia.ObjectTracker;
@@ -54,6 +56,7 @@ import com.vuforia.Tracker;
 import com.vuforia.TrackerManager;
 import com.vuforia.Vuforia;
 import com.vuforia.samples.Books.R;
+import com.vuforia.samples.Books.ui.ActivityList.Company;
 import com.vuforia.samples.Books.ui.ActivityList.CompanyDetails;
 import com.vuforia.samples.Books.ui.ActivityList.YelloVisionLauncher;
 import com.vuforia.samples.SampleApplication.SampleApplicationControl;
@@ -77,6 +80,9 @@ import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 // The main activity for the Books sample.
@@ -147,7 +153,9 @@ public class Books extends Activity implements SampleApplicationControl
     private TextView mStatusBar;
     private Button mCloseButton;
     private Button mMoreDetailsButton;
-
+    private ImageView mThumbsUp;
+    private ImageView mThumbsDown;
+    private Company mCompanyInfo = new Company();
     
     // Error message handling:
     private int mlastErrorCode = 0;
@@ -314,10 +322,23 @@ public class Books extends Activity implements SampleApplicationControl
                 {
                     books.mCloseButton.setVisibility(View.VISIBLE);
                     books.mMoreDetailsButton.setVisibility(View.VISIBLE);
+                    //Condition goes here
+                    if(books.mCompanyInfo.isMatch()){
+                        books.mThumbsUp.setVisibility(View.VISIBLE);
+                        books.mThumbsDown.setVisibility(View.INVISIBLE);
+
+                    }else{
+                        books.mThumbsDown.setVisibility(View.VISIBLE);
+                        books.mThumbsUp.setVisibility(View.INVISIBLE);
+                    }
+
                 } else
                 {
                     books.mCloseButton.setVisibility(View.GONE);
                     books.mMoreDetailsButton.setVisibility(View.GONE);
+                    books.mThumbsDown.setVisibility(View.GONE);
+                    books.mThumbsUp.setVisibility(View.GONE);
+
                 }
             }
         }
@@ -518,7 +539,13 @@ public class Books extends Activity implements SampleApplicationControl
 
         mMoreDetailsButton = (Button) mUILayout
                 .findViewById(R.id.more_details_button);
-        
+
+        mThumbsDown = (ImageView) mUILayout
+                .findViewById(R.id.thumbs_down_scan);
+
+        mThumbsUp = (ImageView) mUILayout
+                .findViewById(R.id.thumbs_up_scan);
+
         // Sets the Close Button functionality
         mCloseButton.setOnClickListener(new OnClickListener()
         {
@@ -550,26 +577,6 @@ public class Books extends Activity implements SampleApplicationControl
         {
             public void onClick(View v)
             {
-                // Updates application status
-//                mBookInfoStatus = BOOKINFO_NOT_DISPLAYED;
-//
-//                loadingDialogHandler.sendEmptyMessage(HIDE_LOADING_DIALOG);
-//
-//                // Checks if the app is currently loading a book data
-//                if (mIsLoadingBookData)
-//                {
-//
-//                    // Cancels the AsyncTask
-//                    mGetBookDataTask.cancel(true);
-//                    mIsLoadingBookData = false;
-//
-//                    // Cleans the Target Tracker Id
-//                    cleanTargetTrackedId();
-//
-//
-//                }
-//
-//                deinitBooks();
 
                 Intent intent = new Intent(mActivity, CompanyDetails.class);
                 Log.d("CREATION", mBookData.getName());
@@ -803,6 +810,27 @@ public class Books extends Activity implements SampleApplicationControl
         {
             try
             {
+
+                /*try {
+                    FileInputStream fileIn=openFileInput("user.txt");
+                    InputStreamReader InputRead= new InputStreamReader(fileIn);
+
+                    char[] inputBuffer= new char[100];
+                    String s="";
+                    int charRead;
+
+                    while ((charRead=InputRead.read(inputBuffer))>0) {
+                        // char to string conversion
+                        String readstring=String.copyValueOf(inputBuffer,0,charRead);
+                        s +=readstring;
+                    }
+                    InputRead.close();
+                    Toast.makeText(getBaseContext(), s,Toast.LENGTH_SHORT).show();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }*/
+
                 // Cleans any old reference to mBookData
                 if (mBookData != null)
                 {
@@ -836,23 +864,38 @@ public class Books extends Activity implements SampleApplicationControl
                     if (temp.getString("name").equals(mBookJSONUrl)) {
                         Log.d("CREATION", temp.getString("name"));
                         mBookData.setName(temp.getString("name"));
+                        //ReInitialize company and match
+                        mCompanyInfo.setName(mBookData.getName());
+                        mCompanyInfo.setIsMatch(false);
+
                         mBookData.setLocation(temp.getString("location"));
 //                        The Majors is messed up need to fix later
                         mBookData.setMajors(temp.getString("primary_majors"));
                         JSONArray openings = new JSONArray(temp.getJSONArray("open_positions").toString());
                         String openStr = "";
+
                         for (int k = 0; k < openings.length(); k++)
                         {
+                            if(!mCompanyInfo.isMatch()){
+                                Boolean match = checkCompanyMatch(openings.getString(k)
+                                        , "position");
+                                if(match){mCompanyInfo.setIsMatch(true);}
+                            }
                             openStr += openings.getString(k);
                             if (k != (openings.length() - 1) )
                                 openStr += ", ";
                         }
                         Log.d("CREATION", openStr);
                         mBookData.setOpenings(openStr);
-                        JSONArray majors = new JSONArray(temp.getJSONArray("open_positions").toString());
+                        JSONArray majors = new JSONArray(temp.getJSONArray("primary_majors").toString());
                         String majorStr = "";
                         for (int k = 0; k < majors.length(); k++)
                         {
+                            if(!mCompanyInfo.isMatch()){
+                                Boolean match = checkCompanyMatch(majors.getString(k)
+                                        , "major");
+                                if(match){mCompanyInfo.setIsMatch(true);}
+                            }
                             majorStr += majors.getString(k);
                             if (k != (majors.length() - 1) )
                                 majorStr += ", ";
@@ -870,6 +913,67 @@ public class Books extends Activity implements SampleApplicationControl
             }
             
             return null;
+        }
+
+
+        /*
+        * params: toMatchPM, is either a position or a major name. matchCategory,
+        * if it's a position or a major.
+        * returns: true if it finds a match.*/
+        private Boolean checkCompanyMatch(String toMatchPM,
+                                          String matchCategory) {
+            try {
+
+                FileInputStream fileIn = openFileInput("user.txt");
+                InputStreamReader inputRead = new InputStreamReader(fileIn);
+                BufferedReader buffReader = new BufferedReader(inputRead);
+
+                String readStr = buffReader.readLine();
+                StringBuffer majorsData = new StringBuffer("");
+                StringBuffer positionsData = new StringBuffer("");
+
+                String majors;
+                String positions;
+
+                int lineNumber = 0;
+
+                while(readStr != null){
+                    if(lineNumber == 0){
+                        majorsData.append(readStr);
+                        lineNumber += 1;
+                    }else{
+                        positionsData.append(readStr);
+                    }
+                    readStr = buffReader.readLine();
+                }
+
+                inputRead.close();
+
+                majors = majorsData.toString();
+                positions = positionsData.toString();
+
+                List<String> majorsMatch = new ArrayList<String>(Arrays.asList(majors.split(",")));
+                List<String> positionsMatch = new ArrayList<String>(Arrays.asList(positions.split(",")));
+
+                if(matchCategory.equals("position")){
+                    for(int i = 0; i < positionsMatch.size(); i++){
+                        if(positionsMatch.get(i).toLowerCase().trim().equals(toMatchPM.toLowerCase().trim())){
+                            return true;
+                        }
+                    }
+                }else if(matchCategory.equals("major")){
+                    for(int i = 0; i < majorsMatch.size(); i++){
+                        if (majorsMatch.get(i).toLowerCase().trim().equals(toMatchPM.toLowerCase().trim())) {
+                            return true;
+                        }
+                    }
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return false;
         }
         
         

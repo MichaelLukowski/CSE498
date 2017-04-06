@@ -14,5 +14,7 @@
 
     <dimen name="menu_title">22sp</dimen>
     <dimen name="menu_title_padding">14sp</dimen>
-    
+
+    <item name="idk" type="dimen">50%</item>
+    <item name="idk2" type="dimen">50%</item>
 </resources>

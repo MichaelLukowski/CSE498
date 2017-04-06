@@ -52,11 +52,10 @@ public class CompanyDetails extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.more_details_layout);
 
         Bundle extras = getIntent().getExtras();
         String nameString = extras.getString("COMPANY_NAME");
-
-        setContentView(R.layout.more_details_layout);
 
         Toolbar detailsToolbar = (Toolbar) findViewById(R.id.details_toolbar);
         setSupportActionBar(detailsToolbar);

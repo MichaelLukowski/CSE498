@@ -29,11 +29,6 @@ public class YelloVisionLauncher extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
         setContentView(R.layout.yello_start_menu);
         //setListAdapter(adapter);
     }
@@ -53,5 +48,10 @@ public class YelloVisionLauncher extends Activity
         Intent myIntent = new Intent(this, YelloVisionListing.class);
 //        myIntent.putExtra("key", value); //Optional parameters
         startActivity(myIntent);
+    }
+
+    public void userInfo(View view){
+        Intent something = new Intent(this, YelloVisionInfo.class);
+        startActivity(something);
     }
 }

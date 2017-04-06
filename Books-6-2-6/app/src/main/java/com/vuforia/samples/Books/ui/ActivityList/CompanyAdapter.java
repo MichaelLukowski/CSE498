@@ -7,10 +7,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vuforia.samples.Books.R;
 
+import java.io.File;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -31,6 +37,8 @@ public class CompanyAdapter extends BaseAdapter implements Filterable {
     public class CompanyHolder
     {
         TextView name;
+        ImageView thumbs_up;
+        ImageView thumbs_down;
     }
 
     public Filter getFilter(){
@@ -69,6 +77,8 @@ public class CompanyAdapter extends BaseAdapter implements Filterable {
         super.notifyDataSetChanged();
     }
 
+    public String getCompanyName(int position){return companyArrayList.get(position).getName();}
+
     @Override
     public int getCount() {
         return companyArrayList.size();
@@ -92,6 +102,8 @@ public class CompanyAdapter extends BaseAdapter implements Filterable {
             convertView= LayoutInflater.from(context).inflate(R.layout.row, parent, false);
             holder=new CompanyHolder();
             holder.name=(TextView) convertView.findViewById(R.id.txtName);
+            holder.thumbs_up = (ImageView) convertView.findViewById(R.id.thumbs_up);
+            holder.thumbs_down = (ImageView) convertView.findViewById(R.id.thumbs_down);
             convertView.setTag(holder);
         }
         else
@@ -101,7 +113,16 @@ public class CompanyAdapter extends BaseAdapter implements Filterable {
 
         holder.name.setText(companyArrayList.get(position).getName());
 
+        if(companyArrayList.get(position).isMatch()){
+            holder.thumbs_up.setVisibility(View.VISIBLE);
+            holder.thumbs_down.setVisibility(View.INVISIBLE);
+        }else {
+            holder.thumbs_down.setVisibility(View.VISIBLE);
+            holder.thumbs_up.setVisibility(View.INVISIBLE);
+        }
+
         return convertView;
 
     }
+
 }
