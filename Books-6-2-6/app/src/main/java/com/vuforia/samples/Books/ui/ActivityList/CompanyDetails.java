@@ -12,6 +12,9 @@ import android.content.pm.LabeledIntent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -22,6 +25,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ShareActionProvider;
 import android.widget.TextView;
 import android.support.v7.app.AppCompatActivity;
@@ -34,6 +38,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +46,7 @@ public class CompanyDetails extends AppCompatActivity {
 
     private String mCompanyName;
     private String mCompanyUrl;
+    private ImageView mCompanyImage;
     private TextView mCompanyLocation;
     private TextView mCompanyDescription;
     private TextView mCompanyMajors;
@@ -62,6 +68,8 @@ public class CompanyDetails extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
         mCompanyName = "";
+//        mCompanyImage = (ImageView) findViewById(R.id.more_details_image);
+
         mCompanyLocation = (TextView) findViewById(R.id.more_details_location);
         mCompanyDescription = (TextView) findViewById(R.id.more_details_description);
         mCompanyMajors = (TextView) findViewById(R.id.more_details_majors);
@@ -82,9 +90,13 @@ public class CompanyDetails extends AppCompatActivity {
             for (int i = 0; i < temparr.length(); i++) {
                 JSONObject temp = temparr.getJSONObject(i);
                 if (temp.getString("name").equals(nameString)) {
-
 //                    Log.d("CREATION", temp.getString("name"));
                     mCompanyName = temp.getString("name");
+                    new DownloadImageTask((ImageView) findViewById(R.id.more_details_image))
+                            .execute(temp.getString("logo"));
+//                    URL url = new URL(temp.getString("logo"));
+//                    Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                    mCompanyImage.setImageBitmap(bmp);
                     mCompanyLocation.setText(temp.getString("location"));
                     mCompanyDescription.setText(temp.getString("description"));
                     mCompanyUrl = temp.getString("url");
@@ -201,6 +213,30 @@ public class CompanyDetails extends AppCompatActivity {
 
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+        ImageView bmImage;
+
+        public DownloadImageTask(ImageView bmImage) {
+            this.bmImage = bmImage;
+        }
+
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = new java.net.URL(urldisplay).openStream();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
+            }
+            return mIcon11;
+        }
+
+        protected void onPostExecute(Bitmap result) {
+            bmImage.setImageBitmap(result);
         }
     }
 }
