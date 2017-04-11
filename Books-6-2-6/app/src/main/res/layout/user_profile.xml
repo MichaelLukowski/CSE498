@@ -4,24 +4,22 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <EditText
-        android:id="@+id/editTextMajor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.06"
-        android:ems="10"
-        android:inputType="text|textPersonName"
-        android:text="Major" />
 
-    <EditText
-        android:id="@+id/editTextOcc"
+    <Spinner
+        android:id="@+id/spinnerMajor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.06"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Occupation" />
+        android:layout_height="38dp"
+        android:dropDownWidth="match_parent"
+        android:entries="@array/spinnerMajor"
+        android:prompt="@string/spinnerMajor_prompt" />
 
+    <Spinner
+        android:id="@+id/spinnerOcc"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:dropDownWidth="match_parent"
+        android:entries="@array/spinnerOcc"
+        android:prompt="@string/spinnerOcc_prompt" />
 
     <LinearLayout
         android:layout_width="fill_parent"

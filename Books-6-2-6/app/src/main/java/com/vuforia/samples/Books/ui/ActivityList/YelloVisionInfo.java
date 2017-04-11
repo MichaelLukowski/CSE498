@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.vuforia.samples.Books.R;
@@ -52,6 +53,9 @@ public class YelloVisionInfo extends Activity {
     private EditText mMajor;
     private EditText mOccupation;
 
+    private Spinner mMajorSpin;
+    private Spinner mOccSpin;
+
     private String userMajor;
     private String userOcc;
 
@@ -62,15 +66,20 @@ public class YelloVisionInfo extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile);
 
+        mMajorSpin = (Spinner) findViewById(R.id.spinnerMajor);
+        mOccSpin = (Spinner) findViewById(R.id.spinnerOcc);
+
         mSubmit=(Button) findViewById(R.id.btnSubmit);
         mCancel=(Button) findViewById(R.id.btnCancel);
-        mMajor=(EditText) findViewById(R.id.editTextMajor);
-        mOccupation=(EditText) findViewById(R.id.editTextOcc);
+//        mMajor=(EditText) findViewById(R.id.editTextMajor);
+//        mOccupation=(EditText) findViewById(R.id.editTextOcc);
 
         mSubmit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                userMajor = mMajor.getText().toString();
-                userOcc = mOccupation.getText().toString();
+                userMajor = mMajorSpin.getSelectedItem().toString();
+                userOcc = mOccSpin.getSelectedItem().toString();
+//                userMajor = mMajor.getText().toString();
+//                userOcc = mOccupation.getText().toString();
                 try {
                     saveInfo(userMajor, userOcc);
                 } catch (IOException e) {
@@ -127,40 +136,6 @@ public class YelloVisionInfo extends Activity {
             e.printStackTrace();
         }
 
-//        ArrayList<String> things = new ArrayList<String>();
-//        things.add(major);
-//        things.add(occ);
-//        FileOutputStream outputStream;
-//        outputStream = openFileOutput("user.json", Context.MODE_PRIVATE);
-//        outputStream.write(major.getBytes());
-//        outputStream.write(occ.getBytes());
-//        writeJsonStream(outputStream,things);
-    }
-
-    private void writeToFile(String data) {
-        try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("user_info.txt", Context.MODE_PRIVATE));
-            outputStreamWriter.write(data);
-            outputStreamWriter.close();
-        }
-        catch (IOException e) {
-            Log.e("Exception", "File write failed: " + e.toString());
-        }
-    }
-
-    public void writeJsonStream(OutputStream out, ArrayList<String> messages) throws IOException {
-        JsonWriter writer = new JsonWriter(new OutputStreamWriter(out, "UTF-8"));
-        writer.setIndent("  ");
-        writeMessagesArray(writer, messages);
-        writer.close();
-    }
-
-    public void writeMessagesArray(JsonWriter writer, ArrayList<String> messages) throws IOException {
-        writer.beginArray();
-        for (String message : messages) {
-            writeMessage(writer, message);
-        }
-        writer.endArray();
     }
 
     public void writeMessage(JsonWriter writer, String message) throws IOException {

@@ -57,6 +57,29 @@
     <string name="more_details">More Details</string>
     <string name="share">Share</string>
 
+    <string name="spinnerMajor_prompt">Choose a major</string>
+    <string-array name="spinnerMajor">
+        <item>Choose a major</item>
+        <item>Computer Science</item>
+        <item>Electrical Engineering</item>
+        <item>Graphic Design</item>
+        <item>Math</item>
+        <item>Mechanical Engineering</item>
+    </string-array>
+
+    <string name="spinnerOcc_prompt">Choose a occupation</string>
+    <string-array name="spinnerOcc">
+        <item>Choose a occupation</item>
+        <item>Android Engineer</item>
+        <item>Consultant</item>
+        <item>Front End Engineer</item>
+        <item>Graphic Designer</item>
+        <item>iOS Engineer</item>
+        <item>Software Engineer</item>
+        <item>Test Engineer</item>
+        <item>Web Engineer</item>
+    </string-array>
+
     <!--Content is filled after 'More Details' button is pressed-->
     <!--<string name="more_details_company_name"></string>-->
     <!--<string name="more_details_location"></string>-->
