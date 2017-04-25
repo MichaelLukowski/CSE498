@@ -33,7 +33,7 @@ public class YelloVisionLauncher extends Activity
         Intent intent = new Intent(this, AboutScreen.class);
         intent.putExtra("ACTIVITY_TO_LAUNCH",
                 "app.Logos.Logos");
-        intent.putExtra("ABOUT_TEXT", "Books/CR_about.html");
+        intent.putExtra("ABOUT_TEXT", "Logos/CR_about.html");
         /*intent.putExtra("ACTIVITY_TO_LAUNCH",
                 "app.ui.ActivityList.AboutScreen");
         intent.putExtra("ABOUT_TEXT", "Logos/CR_about.html");*/

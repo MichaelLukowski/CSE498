@@ -69,7 +69,7 @@ import java.util.List;
 // The main activity for the Logos sample.
 public class Logos extends Activity implements SampleApplicationControl
 {
-    private static final String LOGTAG = "Books";
+    private static final String LOGTAG = "Logos";
     
     SampleApplicationSession vuforiaAppSession;
     
