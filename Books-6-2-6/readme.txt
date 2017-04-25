@@ -11,15 +11,15 @@ countries.
 CloudReco
 ================================================================================
 This sample app illustrates how the Vuforia cloud recognition feature works. 
-The app searches an image database in the cloud to recognize certain book covers 
+The app searches an image database in the cloud to recognize certain logo covers
 and, on successful match, displays information such as their prices and ratings. 
 
 ================================================================================
 How to use the sample
 ================================================================================
-1. Print the book cover images located in the media directory of this package
-2. Point your device at one of the book cover images
-3. When the book cover is recognized the price and rating for this book is 
+1. Print the logo cover images located in the media directory of this package
+2. Point your device at one of the logo cover images
+3. When the logo cover is recognized the price and rating for this logo is
 displayed on top of the cover
 
 ================================================================================

@@ -12,16 +12,13 @@ package com.vuforia.samples.Books.app.Books;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -44,7 +41,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.vuforia.CameraDevice;
 import com.vuforia.ObjectTracker;
@@ -58,7 +54,6 @@ import com.vuforia.Vuforia;
 import com.vuforia.samples.Books.R;
 import com.vuforia.samples.Books.ui.ActivityList.Company;
 import com.vuforia.samples.Books.ui.ActivityList.CompanyDetails;
-import com.vuforia.samples.Books.ui.ActivityList.YelloVisionLauncher;
 import com.vuforia.samples.SampleApplication.SampleApplicationControl;
 import com.vuforia.samples.SampleApplication.SampleApplicationException;
 import com.vuforia.samples.SampleApplication.SampleApplicationSession;
@@ -72,21 +67,17 @@ import org.json.JSONObject;
 import org.json.*;
 import java.io.*;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-// The main activity for the Books sample.
-public class Books extends Activity implements SampleApplicationControl
+// The main activity for the Logos sample.
+public class Logos extends Activity implements SampleApplicationControl
 {
     private static final String LOGTAG = "Books";
     
@@ -128,8 +119,8 @@ public class Books extends Activity implements SampleApplicationControl
     // Status Bar Text
     private String mStatusBarText;
     
-    // Active Book Data
-    private Book mBookData;
+    // Active Logo Data
+    private Logo mLogoData;
     private String mBookJSONUrl;
     private Texture mBookDataTexture;
     
@@ -143,7 +134,7 @@ public class Books extends Activity implements SampleApplicationControl
     private SampleApplicationGLView mGlView;
     
     // Our renderer:
-    private BooksRenderer mRenderer;
+    private LogosRenderer mRenderer;
     
     private static final String kAccessKey = "7273303e335e97907b1074132bc42d7e2ca41c18";
     private static final String kSecretKey = "2c1f372d4fdbea50f1220926de78ee278c2f0c2c";
@@ -200,7 +191,7 @@ public class Books extends Activity implements SampleApplicationControl
     
     private void initStateVariables()
     {
-        mRenderer.setRenderState(BooksRenderer.RS_SCANNING);
+        mRenderer.setRenderState(LogosRenderer.RS_SCANNING);
         mRenderer.setProductTexture(null);
         
         mRenderer.setScanningMode(true);
@@ -218,7 +209,7 @@ public class Books extends Activity implements SampleApplicationControl
      */
     public void productTextureIsCreated()
     {
-        mRenderer.setRenderState(BooksRenderer.RS_TEXTURE_GENERATED);
+        mRenderer.setRenderState(LogosRenderer.RS_TEXTURE_GENERATED);
     }
     
     
@@ -264,30 +255,30 @@ public class Books extends Activity implements SampleApplicationControl
      */
     static class StatusBarHandler extends Handler
     {
-        private final WeakReference<Books> mBooks;
+        private final WeakReference<Logos> mBooks;
         
         
-        StatusBarHandler(Books books)
+        StatusBarHandler(Logos logos)
         {
-            mBooks = new WeakReference<Books>(books);
+            mBooks = new WeakReference<Logos>(logos);
         }
 
 
         public void handleMessage(Message msg)
         {
-            Books books = mBooks.get();
-            if (books == null)
+            Logos logos = mBooks.get();
+            if (logos == null)
             {
                 return;
             }
             
             if (msg.what == SHOW_STATUS_BAR)
             {
-                books.mStatusBar.setText(books.mStatusBarText);
-                books.mStatusBar.setVisibility(View.VISIBLE);
+                logos.mStatusBar.setText(logos.mStatusBarText);
+                logos.mStatusBar.setVisibility(View.VISIBLE);
             } else
             {
-                books.mStatusBar.setVisibility(View.GONE);
+                logos.mStatusBar.setVisibility(View.GONE);
             }
         }
     }
@@ -299,45 +290,45 @@ public class Books extends Activity implements SampleApplicationControl
      */
     static class Overlay2dHandler extends Handler
     {
-        private final WeakReference<Books> mBooks;
+        private final WeakReference<Logos> mBooks;
         
         
-        Overlay2dHandler(Books books)
+        Overlay2dHandler(Logos logos)
         {
-            mBooks = new WeakReference<Books>(books);
+            mBooks = new WeakReference<Logos>(logos);
         }
         
         
         public void handleMessage(Message msg)
         {
-            Books books = mBooks.get();
-            if (books == null)
+            Logos logos = mBooks.get();
+            if (logos == null)
             {
                 return;
             }
             
-            if (books.mCloseButton != null)
+            if (logos.mCloseButton != null)
             {
                 if (msg.what == SHOW_2D_OVERLAY)
                 {
-                    books.mCloseButton.setVisibility(View.VISIBLE);
-                    books.mMoreDetailsButton.setVisibility(View.VISIBLE);
+                    logos.mCloseButton.setVisibility(View.VISIBLE);
+                    logos.mMoreDetailsButton.setVisibility(View.VISIBLE);
                     //Condition goes here
-                    if(books.mCompanyInfo.isMatch()){
-                        books.mThumbsUp.setVisibility(View.VISIBLE);
-                        books.mThumbsDown.setVisibility(View.INVISIBLE);
+                    if(logos.mCompanyInfo.isMatch()){
+                        logos.mThumbsUp.setVisibility(View.VISIBLE);
+                        logos.mThumbsDown.setVisibility(View.INVISIBLE);
 
                     }else{
-                        books.mThumbsDown.setVisibility(View.VISIBLE);
-                        books.mThumbsUp.setVisibility(View.INVISIBLE);
+                        logos.mThumbsDown.setVisibility(View.VISIBLE);
+                        logos.mThumbsUp.setVisibility(View.INVISIBLE);
                     }
 
                 } else
                 {
-                    books.mCloseButton.setVisibility(View.GONE);
-                    books.mMoreDetailsButton.setVisibility(View.GONE);
-                    books.mThumbsDown.setVisibility(View.GONE);
-                    books.mThumbsUp.setVisibility(View.GONE);
+                    logos.mCloseButton.setVisibility(View.GONE);
+                    logos.mMoreDetailsButton.setVisibility(View.GONE);
+                    logos.mThumbsDown.setVisibility(View.GONE);
+                    logos.mThumbsUp.setVisibility(View.GONE);
 
                 }
             }
@@ -579,8 +570,8 @@ public class Books extends Activity implements SampleApplicationControl
             {
 
                 Intent intent = new Intent(mActivity, CompanyDetails.class);
-                Log.d("CREATION", mBookData.getName());
-                intent.putExtra("COMPANY_NAME", mBookData.getName());
+                Log.d("CREATION", mLogoData.getName());
+                intent.putExtra("COMPANY_NAME", mLogoData.getName());
 
                 startActivity(intent);
 //
@@ -614,7 +605,7 @@ public class Books extends Activity implements SampleApplicationControl
         mGlView.init(translucent, depthSize, stencilSize);
 
         // Setups the Renderer of the GLView
-        mRenderer = new BooksRenderer(this, vuforiaAppSession);
+        mRenderer = new LogosRenderer(this, vuforiaAppSession);
         mRenderer.mActivity = this;
         mGlView.setRenderer(mRenderer);
         
@@ -727,12 +718,12 @@ public class Books extends Activity implements SampleApplicationControl
                 
                 // Generates an Alert Dialog to show the error message
                 AlertDialog.Builder builder = new AlertDialog.Builder(
-                    Books.this);
+                    Logos.this);
                 builder
                     .setMessage(
-                        getStatusDescString(Books.this.mlastErrorCode))
+                        getStatusDescString(Logos.this.mlastErrorCode))
                     .setTitle(
-                        getStatusTitleString(Books.this.mlastErrorCode))
+                        getStatusTitleString(Logos.this.mlastErrorCode))
                     .setCancelable(false)
                     .setIcon(0)
                     .setPositiveButton(getString(R.string.button_OK),
@@ -831,10 +822,10 @@ public class Books extends Activity implements SampleApplicationControl
                     e.printStackTrace();
                 }*/
 
-                // Cleans any old reference to mBookData
-                if (mBookData != null)
+                // Cleans any old reference to mLogoData
+                if (mLogoData != null)
                 {
-                    mBookData = null;
+                    mLogoData = null;
                     
                 }
 
@@ -856,21 +847,21 @@ public class Books extends Activity implements SampleApplicationControl
                 JSONObject jsonObject = new JSONObject(json);
                 JSONArray jarr = new JSONArray(jsonObject.getJSONArray("companies").toString());
 
-                mBookData = new Book();
+                mLogoData = new Logo();
 
                 for (int i = 0; i < jarr.length(); i++)
                 {
                     JSONObject temp = jarr.getJSONObject(i);
                     if (temp.getString("name").equals(mBookJSONUrl)) {
                         Log.d("CREATION", temp.getString("name"));
-                        mBookData.setName(temp.getString("name"));
+                        mLogoData.setName(temp.getString("name"));
                         //ReInitialize company and match
-                        mCompanyInfo.setName(mBookData.getName());
+                        mCompanyInfo.setName(mLogoData.getName());
                         mCompanyInfo.setIsMatch(false);
 
-                        mBookData.setLocation(temp.getString("location"));
+                        mLogoData.setLocation(temp.getString("location"));
 //                        The Majors is messed up need to fix later
-                        mBookData.setMajors(temp.getString("primary_majors"));
+                        mLogoData.setMajors(temp.getString("primary_majors"));
                         JSONArray openings = new JSONArray(temp.getJSONArray("open_positions").toString());
                         String openStr = "";
 
@@ -886,7 +877,7 @@ public class Books extends Activity implements SampleApplicationControl
                                 openStr += ", ";
                         }
                         Log.d("CREATION", openStr);
-                        mBookData.setOpenings(openStr);
+                        mLogoData.setOpenings(openStr);
                         JSONArray majors = new JSONArray(temp.getJSONArray("primary_majors").toString());
                         String majorStr = "";
                         for (int k = 0; k < majors.length(); k++)
@@ -900,7 +891,7 @@ public class Books extends Activity implements SampleApplicationControl
                             if (k != (majors.length() - 1) )
                                 majorStr += ", ";
                         }
-                        mBookData.setDescription(majorStr);
+                        mLogoData.setDescription(majorStr);
                         break;
                     }
                 }
@@ -985,14 +976,14 @@ public class Books extends Activity implements SampleApplicationControl
         
         protected void onPostExecute(Void result)
         {
-            if (mBookData != null)
+            if (mLogoData != null)
             {
                 // Generates a View to display the book data
-                BookOverlayView productView = new BookOverlayView(
-                    Books.this);
+                LogoOverlayView productView = new LogoOverlayView(
+                    Logos.this);
                 
                 // Updates the view used as a 3d Texture
-                updateProductView(productView, mBookData);
+                updateProductView(productView, mLogoData);
                 
                 // Sets the layout params
                 productView.setLayoutParams(new LayoutParams(
@@ -1063,20 +1054,20 @@ public class Books extends Activity implements SampleApplicationControl
 
     
     
-    /** Returns the current Book Data Texture */
+    /** Returns the current Logo Data Texture */
     public Texture getProductTexture()
     {
         return mBookDataTexture;
     }
     
     
-    /** Updates a BookOverlayView with the Book data specified in parameters */
-    private void updateProductView(BookOverlayView productView, Book book)
+    /** Updates a BookOverlayView with the Logo data specified in parameters */
+    private void updateProductView(LogoOverlayView productView, Logo logo)
     {
-        productView.setBookName(book.getName());
-        productView.setBookOpenings(book.getOpenings());
-        productView.setDescription(book.getDescription());
-        productView.setBookLocation(book.getLocation());
+        productView.setBookName(logo.getName());
+        productView.setBookOpenings(logo.getOpenings());
+        productView.setDescription(logo.getDescription());
+        productView.setBookLocation(logo.getLocation());
     }
     
     
@@ -1138,11 +1129,11 @@ public class Books extends Activity implements SampleApplicationControl
         // Updates state variables
         mRenderer.showAnimation3Dto2D(false);
         mRenderer.isShowing2DOverlay(false);
-        mRenderer.setRenderState(BooksRenderer.RS_SCANNING);
+        mRenderer.setRenderState(LogosRenderer.RS_SCANNING);
     }
     
     
-    /** Displays the 2D Book Overlay */
+    /** Displays the 2D Logo Overlay */
     public void show2DOverlay()
     {
         // Sends the Message to the Handler in the UI thread
@@ -1150,7 +1141,7 @@ public class Books extends Activity implements SampleApplicationControl
     }
     
     
-    /** Hides the 2D Book Overlay */
+    /** Hides the 2D Logo Overlay */
     public void hide2DOverlay()
     {
         // Sends the Message to the Handler in the UI thread
@@ -1334,7 +1325,7 @@ public class Books extends Activity implements SampleApplicationControl
                 
                 // Generates an Alert Dialog to show the error message
                 AlertDialog.Builder builder = new AlertDialog.Builder(
-                    Books.this);
+                    Logos.this);
                 builder
                     .setMessage(errorMessage)
                     .setTitle(getString(R.string.INIT_ERROR))
@@ -1411,13 +1402,13 @@ public class Books extends Activity implements SampleApplicationControl
                             // texture
                             // Cleaning this value indicates that the product
                             // Texture needs to be generated
-                            // again in Java with the new Book data for the new
+                            // again in Java with the new Logo data for the new
                             // target
                             mRenderer.deleteCurrentProductTexture();
                             
                             // Starts the loading state for the product
                             mRenderer
-                                .setRenderState(BooksRenderer.RS_LOADING);
+                                .setRenderState(LogosRenderer.RS_LOADING);
                             
                             // Calls the Java method with the current product
                             // texture
@@ -1425,7 +1416,7 @@ public class Books extends Activity implements SampleApplicationControl
                             
                         } else
                             mRenderer
-                                .setRenderState(BooksRenderer.RS_NORMAL);
+                                .setRenderState(LogosRenderer.RS_NORMAL);
                         
                         // Initialize the frames to skip variable, used for
                         // waiting

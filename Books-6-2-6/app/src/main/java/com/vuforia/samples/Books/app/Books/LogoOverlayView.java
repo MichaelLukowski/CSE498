@@ -12,30 +12,27 @@ package com.vuforia.samples.Books.app.Books;
 import com.vuforia.samples.Books.R;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-// Custom View with Book Overlay Data
-public class BookOverlayView extends RelativeLayout
+// Custom View with Logo Overlay Data
+public class LogoOverlayView extends RelativeLayout
 {
-    public BookOverlayView(Context context)
+    public LogoOverlayView(Context context)
     {
         this(context, null);
     }
     
     
-    public BookOverlayView(Context context, AttributeSet attrs)
+    public LogoOverlayView(Context context, AttributeSet attrs)
     {
         this(context, attrs, 0);
     }
     
     
-    public BookOverlayView(Context context, AttributeSet attrs, int defStyle)
+    public LogoOverlayView(Context context, AttributeSet attrs, int defStyle)
     {
         super(context, attrs, defStyle);
         inflateLayout(context);
@@ -54,7 +51,7 @@ public class BookOverlayView extends RelativeLayout
     }
 
     
-    // Sets Book title in View
+    // Sets Logo title in View
     public void setBookName(String bookName)
     {
         TextView tv = (TextView) findViewById(R.id.custom_view_title);
@@ -64,7 +61,7 @@ public class BookOverlayView extends RelativeLayout
     }
     
     
-    // Sets Book Author in View
+    // Sets Logo Author in View
     public void setBookLocation(String bookLocation)
     {
         TextView tv = (TextView) findViewById(R.id.custom_view_author);
@@ -72,7 +69,7 @@ public class BookOverlayView extends RelativeLayout
     }
     
     
-    // Sets Book Price in View
+    // Sets Logo Price in View
     public void setBookOpenings(String bookOpenings)
     {
         TextView tv = (TextView) findViewById(R.id.custom_view_price_old);
@@ -80,7 +77,7 @@ public class BookOverlayView extends RelativeLayout
     }
     
     
-    // Sets Book Number of Ratings in View
+    // Sets Logo Number of Ratings in View
     public void setBookRatingCount(String ratingCount)
     {
         TextView tv = (TextView) findViewById(R.id.custom_view_rating_text);
@@ -90,7 +87,7 @@ public class BookOverlayView extends RelativeLayout
     }
     
     
-    // Sets Book Special Price in View
+    // Sets Logo Special Price in View
     public void setDescription(String description)
     {
         TextView tv = (TextView) findViewById(R.id.badge_price_value);
@@ -98,7 +95,7 @@ public class BookOverlayView extends RelativeLayout
     }
 
     
-    // Sets Book Cover in View from a bitmap
+    // Sets Logo Cover in View from a bitmap
 //    public void setCoverViewFromBitmap(Bitmap coverBook)
 //    {
 //        ImageView iv = (ImageView) findViewById(R.id.custom_view_book_cover);
@@ -106,7 +103,7 @@ public class BookOverlayView extends RelativeLayout
 //    }
 //
 //
-//    // Sets Book Rating in View
+//    // Sets Logo Rating in View
 //    public void setRating(String rating)
 //    {
 //        RatingBar rb = (RatingBar) findViewById(R.id.custom_view_rating);

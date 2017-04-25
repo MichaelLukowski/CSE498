@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 
 // A support class encapsulating the info for one book
-public class Book
+public class Logo
 {
     private String name;
     private String location;
@@ -26,7 +26,7 @@ public class Book
     private String majors;
     
     
-    public Book()
+    public Logo()
     {
         
     }

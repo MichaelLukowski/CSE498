@@ -36,11 +36,11 @@ public class YelloVisionLauncher extends Activity
     public void scanLogo(View view){
         Intent intent = new Intent(this, AboutScreen.class);
         intent.putExtra("ACTIVITY_TO_LAUNCH",
-                "app.Books.Books");
+                "app.Logos.Logos");
         intent.putExtra("ABOUT_TEXT", "Books/CR_about.html");
         /*intent.putExtra("ACTIVITY_TO_LAUNCH",
                 "app.ui.ActivityList.AboutScreen");
-        intent.putExtra("ABOUT_TEXT", "Books/CR_about.html");*/
+        intent.putExtra("ABOUT_TEXT", "Logos/CR_about.html");*/
         startActivity(intent);
     }
 
